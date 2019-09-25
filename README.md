@@ -1,7 +1,7 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.integrify.io">
-    <img alt="Integrify" src="https://cdn-images-1.medium.com/max/1200/1*lom-swsdYU460G9DdLIdXg.jpeg" />
+    <img alt="Integrify" src="https://cdn-images-1.medium.com/max/1200/1*lom-swsdYU460G9DdLIdXg.jpeg" width="100" />
   </a>
 </p>
 <h1 align="center">
