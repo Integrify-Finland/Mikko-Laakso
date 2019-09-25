@@ -47,6 +47,9 @@ jobs:
     working_directory: ~/repo
     steps:
       - gatsby-build
+      - run: Testing
+          name: Testing
+          command: yarn test
       - run:
           name: Install netlify-cli
           command: sudo npm install -g --silent netlify-cli
@@ -58,6 +61,9 @@ jobs:
     working_directory: ~/repo
     steps:
       - gatsby-build
+      - run: Testing
+          name: Testing
+          command: yarn test
       - run:
           name: Install netlify-cli
           command: sudo npm install -g --silent netlify-cli
