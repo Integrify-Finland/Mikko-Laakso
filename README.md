@@ -1,11 +1,11 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <p align="center">
   <a href="https://www.integrify.io">
-    <img alt="Integrify" src="https://cdn-images-1.medium.com/max/1200/1*lom-swsdYU460G9DdLIdXg.jpeg" width="60" />
+    <img alt="Integrify" src="https://cdn-images-1.medium.com/max/1200/1*lom-swsdYU460G9DdLIdXg.jpeg" />
   </a>
 </p>
 <h1 align="center">
-  React, Typescript, Gatsby, CircleCI, Netlify Boilerplate
+  React-Typescript-Gatsby-CircleCI-Netlify Boilerplate
 </h1>
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
