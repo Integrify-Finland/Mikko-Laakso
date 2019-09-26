@@ -37,18 +37,18 @@ Kick off your project with this default boilerplate. This starter ships with the
 
 3.  **Setting up CI/CD**
 
-    Registered your account on CircleCI and Netlify
+    Registered your account on CircleCI and Netlify.
 
-    Get Netlify Site ID + generate Netlify personal access token
+    Get Netlify Site ID + generate Netlify personal access token.
 
-    Connect project github repo to CircleCI, go to project settings, environment variables add 2 variables
+    Connect project github repo to CircleCI, go to project settings, click on environment variables and add 2 variables.
 
     ```shell
     NETLIFY_ACCESS_TOKEN <your generated Netlify personal access token>
     NETLIFY_SITE_ID <your Netlify Site ID>
     ```
 
-    After setting this up everytime you push CircleCI will check for lint + testing error, if passed you can click details in CircleCI check and see the Web URL deployed on Netlify.
+    After setting this up, everytime you push, CircleCI will check for lint + testing error, if passed you can click details in CircleCI check and see the Web URL deployed on Netlify.
 
     Note that for master branch, CircleCI will build the App and release to Netlify with tag --prod for Production deployment.
 
