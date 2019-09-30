@@ -81,11 +81,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged & yarn run types-check"
+      "pre-commit": "lint-staged & yarn types-check"
     }
   },
   "lint-staged": {
-    "src/*.{ts, tsx}": "yarn run lint",
+    "src/*.{ts, tsx}": "yarn lint",
     "**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)": [
       "yarn run format",
       "git add"

@@ -11,17 +11,28 @@ storiesOf('Button', module)
 			label="Tilaa uutiskirje →"
 			size="lg"
 			variant="orange"
-			onClick={() => {}}
+			onClick={() => {
+				console.log('clicked')
+			}}
 		/>
 	))
 	.add('primary', () => (
-		<Button label="Lähetä→" size="md" variant="primary" onClick={() => {}} />
+		<Button
+			label="Lähetä→"
+			size="md"
+			variant="primary"
+			onClick={() => {
+				console.log('clicked')
+			}}
+		/>
 	))
 	.add('secondary', () => (
 		<Button
 			label="Lue lisää"
 			size="sm"
 			variant="secondary"
-			onClick={() => {}}
+			onClick={() => {
+				console.log('clicked')
+			}}
 		/>
 	))
