@@ -1,5 +1,5 @@
 import * as React from 'react'
-import Header from '../header'
+import Header from '../'
 import {render} from '@testing-library/react'
 
 describe('<Header/>', () => {
@@ -7,7 +7,7 @@ describe('<Header/>', () => {
 		// Arrange
 		const {getByText} = render(<Header siteTitle={'TESTING'} />)
 
-		//Act
+		// Act
 
 		// Assert
 		expect(getByText('TESTING')).toBeInTheDocument()

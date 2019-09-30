@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Tri Hoang <hoangtri241097@gmail.com>",
   "dependencies": {
+    "@storybook/react": "^5.2.1",
     "@testing-library/jest-dom": "^4.1.0",
     "gatsby": "^2.15.22",
     "gatsby-image": "^2.2.21",
@@ -15,23 +16,26 @@
     "gatsby-plugin-typescript": "^2.1.9",
     "gatsby-source-filesystem": "^2.1.26",
     "gatsby-transformer-sharp": "^2.2.17",
-    "prop-types": "^15.7.2",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.6.2",
     "@testing-library/react": "^9.1.4",
     "@types/jest": "^24.0.18",
     "@types/react": "^16.9.1",
     "@types/react-dom": "^16.9.1",
     "@types/react-helmet": "^5.0.10",
+    "@types/storybook__react": "^4.0.2",
+    "babel-loader": "^8.0.6",
     "cross-env": "^6.0.0",
     "gatsby-plugin-tslint": "^0.0.2",
     "husky": "^3.0.5",
     "jest": "^24.9.0",
     "lint-staged": "^9.3.0",
     "prettier": "^1.18.2",
+    "storybook": "^5.1.11",
     "ts-jest": "^24.1.0",
     "tslint": "^5.20.0",
     "tslint-config-prettier": "^1.18.0",
@@ -59,7 +63,9 @@
     "start": "yarn run develop",
     "serve": "gatsby serve",
     "test": "cross-env NODE_ENV=test jest",
-    "test:watch": "cross-env NODE_ENV=test jest --watchAll"
+    "test:watch": "cross-env NODE_ENV=test jest --watchAll",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "husky": {
     "hooks": {
