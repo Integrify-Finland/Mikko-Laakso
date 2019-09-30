@@ -65,8 +65,8 @@ jobs:
     steps:
       - gatsby-build
       - run:
-        name: Check lint error
-        command: yarn lint
+          name: Check lint error
+          command: yarn lint
       - run:
           name: Testing
           command: yarn test
