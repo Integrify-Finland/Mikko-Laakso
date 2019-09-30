@@ -5,7 +5,7 @@ import {render} from '@testing-library/react'
 describe('<Header/>', () => {
 	it('should render Header with <TESTING> as title', () => {
 		// Arrange
-		const {getByText} = render(<Header siteTitle={'TESTiNG'} />)
+		const {getByText} = render(<Header siteTitle={'TESTING'} />)
 
 		// Act
 
