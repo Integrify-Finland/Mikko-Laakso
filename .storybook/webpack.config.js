@@ -24,6 +24,27 @@ module.exports = ({config}) => {
 	config.resolve.mainFields = ['browser', 'module', 'main']
 
 	config.module.rules.push({
+		test: /\.scss$/,
+		use: ['style-loader', 'css-loader', 'sass-loader'],
+		include: path.resolve(__dirname, '../'),
+	})
+
+	config.module.rules.push({
+		test: /(\.module)?\.s(a|c)ss$/,
+		use: [
+			{
+				loader: 'sass-resources-loader',
+				options: {
+					resources: path.resolve(
+						__dirname,
+						'../src/assets/styles/_utils.scss',
+					),
+				},
+			},
+		],
+	})
+
+	config.module.rules.push({
 		test: /\.(ts|tsx)$/,
 		loader: require.resolve('babel-loader'),
 		options: {
