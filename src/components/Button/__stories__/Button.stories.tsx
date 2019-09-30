@@ -17,14 +17,7 @@ storiesOf('Button', module)
 		/>
 	))
 	.add('primary', () => (
-		<Button
-			label="Lähetä→"
-			size="md"
-			variant="primary"
-			onClick={() => {
-				console.log('clicked')
-			}}
-		/>
+		<Button label="Lähetä→" size="md" variant="primary" onClick={() => {}} />
 	))
 	.add('secondary', () => (
 		<Button
