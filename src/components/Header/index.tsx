@@ -5,7 +5,7 @@ import './styles.scss'
 const janneImage = require('./assets/janneHeader.png')
 const Logo = require('./assets/logo.svg')
 
-import Newsletter from '../Newsletter'
+// import Newsletter from '../Newsletter'
 interface Props {
 	Headline?: string
 	Subtext?: string
@@ -50,10 +50,10 @@ const Header: React.FC<Props> = ({
 							<p className="header__subtext">{Subtext}</p>
 						</div>
 						<div className="header__newsletter-wrapper">
-							<Newsletter
+							{/* <Newsletter
 								animationStage={animationStage}
 								setAnimationStage={setAnimationStage}
-							/>
+							/> */}
 						</div>
 					</div>
 
