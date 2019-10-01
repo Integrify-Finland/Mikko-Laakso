@@ -10,6 +10,7 @@
     "classnames": "^2.2.6",
     "gatsby": "^2.15.22",
     "gatsby-image": "^2.2.21",
+    "gatsby-plugin-mailchimp": "^5.1.2",
     "gatsby-plugin-manifest": "^2.2.18",
     "gatsby-plugin-offline": "^3.0.8",
     "gatsby-plugin-react-helmet": "^3.1.8",
@@ -19,7 +20,8 @@
     "gatsby-transformer-sharp": "^2.2.17",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-helmet": "^5.2.1"
+    "react-helmet": "^5.2.1",
+    "react-netlify-form": "^2.1.5"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
@@ -33,6 +35,7 @@
     "@types/react": "^16.9.1",
     "@types/react-dom": "^16.9.1",
     "@types/react-helmet": "^5.0.10",
+    "@types/storybook__addon-viewport": "^4.1.1",
     "babel-loader": "^8.0.6",
     "cross-env": "^6.0.0",
     "css-loader": "^3.2.0",
@@ -81,11 +84,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn lint-staged & yarn types-check"
+      "pre-commit": "lint-staged & yarn types-check"
     }
   },
   "lint-staged": {
-    "src/**/*.{ts,tsx}": "yarn lint",
+    "src/*.{ts,tsx}": "yarn lint",
     "**/*.+(js|jsx|json|ts|tsx|css|scss|md|mdx|graphql)": [
       "yarn format",
       "git add"
