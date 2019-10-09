@@ -1,0 +1,59 @@
+import React, {Component} from 'react'
+
+import MenuBar from './components/MenuBar/index'
+import SideBar from './components/SideBar/index'
+import BackDrop from './components/BackDrop/index'
+
+class Navbar extends Component {
+	state = {
+		sideDrawer: false,
+	}
+
+	componentDidMount() {
+		document.addEventListener('keydown', this.onEscButton, false)
+	}
+
+	componentWillUnmount() {
+		document.removeEventListener('keydown', this.onEscButton, false)
+	}
+
+	toggleMenu = () => {
+		this.setState(prevState => ({
+			sideDrawer: !prevState.sideDrawer,
+		}))
+	}
+
+	onEscButton = ev => {
+		if (ev.keyCode === 27) {
+			this.setState({
+				sideDrawer: false,
+			})
+		}
+	}
+
+	backDropClickHandler = () => {
+		this.setState({
+			sideDrawer: false,
+		})
+	}
+
+	render() {
+		const {sideDrawer} = this.state
+
+		return (
+			<>
+				{sideDrawer && <BackDrop click={this.backDropClickHandler} />}
+				<MenuBar toggleMenu={this.toggleMenu} location={this.props.location} />
+
+				<SideBar
+					show={sideDrawer}
+					onEscButton={this.onEscButton}
+					toggleMenu={this.toggleMenu}
+					location={this.props.location}
+				/>
+			</>
+		)
+	}
+}
+
+export default Navbar

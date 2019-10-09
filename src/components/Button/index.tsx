@@ -7,7 +7,7 @@ interface Props {
 	label: string
 	size: string
 	disabled?: boolean
-	onClick?: () => {}
+	onClick?: () => void
 }
 
 const Button: React.FC<Props> = ({variant, label, size, disabled, onClick}) => {

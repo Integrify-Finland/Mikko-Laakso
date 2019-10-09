@@ -5,7 +5,6 @@ import './styles.scss'
 const janneImage = require('./assets/janneHeader.png')
 const Logo = require('./assets/logo.svg')
 
-// import Newsletter from '../Newsletter'
 interface Props {
 	Headline?: string
 	Subtext?: string
@@ -32,7 +31,7 @@ const Header: React.FC<Props> = ({
 	Koulutus,
 	Luottamustehtava,
 }) => {
-	const [animationStage, setAnimationStage] = useState('initial')
+	const [animationStage] = useState('initial')
 
 	const textboxClassName = classNames({
 		header__textbox: true,
@@ -48,12 +47,6 @@ const Header: React.FC<Props> = ({
 						<div className={textboxClassName}>
 							<h1 className="header__headline">{Headline}</h1>
 							<p className="header__subtext">{Subtext}</p>
-						</div>
-						<div className="header__newsletter-wrapper">
-							{/* <Newsletter
-								animationStage={animationStage}
-								setAnimationStage={setAnimationStage}
-							/> */}
 						</div>
 					</div>
 

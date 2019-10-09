@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './styles.scss'
-import kokoomusLogo from './assets/kokoomus-logo.svg'
+const kokoomusLogo = require('./assets/kokoomus-logo.svg')
 import FacebookIcon from '../SocialMediaIcons/Facebook/index'
 import TwitterIcon from '../SocialMediaIcons/Twitter/index'
 import InstagramIcon from '../SocialMediaIcons/Instagram/index'
