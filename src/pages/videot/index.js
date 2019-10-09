@@ -62,7 +62,6 @@ const Video = ({data}) => {
 									tabIndex="0"
 									role="button"
 									onClick={() => handlePlayVid(index)}
-									onKeyPress={() => {}}
 								/>
 							</div>
 							<strong>{node.title}</strong>
@@ -70,8 +69,8 @@ const Video = ({data}) => {
 							<span
 								style={{
 									color: '#707070',
-									marginTop: '0.5rem',
 									display: 'block',
+									marginTop: '0.5rem',
 								}}
 							>
 								{formateDate(node.publishedAt, 'long')}

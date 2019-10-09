@@ -8,14 +8,14 @@ import Media from '../../components/Media'
 import Section from '../../components/Section'
 
 import './styles.scss'
-type DataProps = {
+interface DataProps {
 	data: {
 		forMedia: {
 			pictures: []
 		}
 	}
 }
-type Data = {
+interface Data {
 	fluid: any
 }
 const Medialle = ({data}: DataProps) => {

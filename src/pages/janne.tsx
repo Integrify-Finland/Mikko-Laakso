@@ -8,7 +8,7 @@ import AboutTextBlock from '../components/About-text-block'
 import Section from '../components/Section'
 
 import Header from '../components/Header'
-type Node = {
+interface Node {
 	node: {
 		title: string
 		dateForOrder: string
@@ -22,7 +22,7 @@ type Node = {
 		}
 	}
 }
-type Data = {
+interface Data {
 	data: {
 		resume: {
 			opinnot: string[]

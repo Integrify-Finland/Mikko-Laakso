@@ -4,21 +4,23 @@ import './styles.scss'
 
 class Facebook extends Component {
 	state = {
-		width: 500,
 		height: 580,
+		width: 500,
 	}
 
 	loadFBLoginApi = () => {
 		window.fbAsyncInit = () => {
 			window.FB.init({
 				autoLogAppEvents: true,
-				xfbml: true,
 				version: 'v3.2',
+				xfbml: true,
 			})
 		}
 		;((d, s, id) => {
 			const fjs = d.getElementsByTagName(s)[0]
-			if (d.getElementById(id)) return
+			if (d.getElementById(id)) {
+				return
+			}
 
 			const js = d.createElement(s)
 			js.id = id
