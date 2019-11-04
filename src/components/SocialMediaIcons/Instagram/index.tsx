@@ -5,7 +5,7 @@ import '../styles.scss'
 interface Props {
 	iconSize: string
 }
-const InstagramIcon: React.FC<Props> = ({iconSize}) => {
+const InstagramIcon: React.FC<Props> = ({ iconSize }) => {
 	const iconStyles = classNames({
 		'social-svg-icons': true,
 		[`social-svg-icons--${iconSize}`]: iconSize,

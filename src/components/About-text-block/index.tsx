@@ -7,7 +7,7 @@ interface Props {
 	icon: string
 	isLeft: boolean
 }
-const AboutTextBlock: React.FC<Props> = ({title, text, icon, isLeft}) => {
+const AboutTextBlock: React.FC<Props> = ({ title, text, icon, isLeft }) => {
 	const classes = classNames({
 		iconRight: isLeft,
 		iconLeft: !isLeft,

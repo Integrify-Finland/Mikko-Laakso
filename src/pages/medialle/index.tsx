@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
 import Image from '../../components/Image'
@@ -18,8 +18,8 @@ interface DataProps {
 interface Data {
 	fluid: any
 }
-const Medialle = ({data}: DataProps) => {
-	const {forMedia} = data
+const Medialle = ({ data }: DataProps) => {
+	const { forMedia } = data
 
 	return (
 		<Layout>

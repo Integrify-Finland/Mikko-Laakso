@@ -4,7 +4,7 @@ import './styles.scss'
 interface Props {
 	click: () => void
 }
-const BackDrop: React.FC<Props> = ({click}) => (
+const BackDrop: React.FC<Props> = ({ click }) => (
 	<div
 		className="backdrop"
 		onKeyPress={click}

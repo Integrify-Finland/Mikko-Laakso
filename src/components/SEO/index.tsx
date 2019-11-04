@@ -1,6 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
-import {useStaticQuery, graphql} from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const thumbnail = require('../../assets/images/thumbnail.jpg')
 interface Props {
@@ -9,8 +9,8 @@ interface Props {
 	meta?: []
 	title?: string
 }
-const SEO: React.FC<Props> = ({description, lang, meta, title}) => {
-	const {site} = useStaticQuery(
+const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
+	const { site } = useStaticQuery(
 		graphql`
 			query {
 				site {

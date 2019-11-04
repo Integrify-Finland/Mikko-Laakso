@@ -1,12 +1,10 @@
 import React from 'react'
 
-import {storiesOf} from '@storybook/react'
-import {jsxDecorator} from 'storybook-addon-jsx'
+import { storiesOf } from '@storybook/react'
 
 import Header from '..'
 
 storiesOf('Header', module)
-	.addDecorator(jsxDecorator)
 	.add('Etusivu Header', () => (
 		<Header Subtext="Kansanedustaja, yhteiskuntatieteiden maisteri ja intohimoinen perhokalastaja." />
 	))

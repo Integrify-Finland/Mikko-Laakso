@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import {graphql} from 'gatsby'
+import React, { useState } from 'react'
+import { graphql } from 'gatsby'
 
 import Layout from '../../components/Layout'
 import SEO from '../../components/SEO'
@@ -9,8 +9,8 @@ import formateDate from '../../helpers/formateDate'
 
 import './styles.scss'
 
-const Video = ({data}) => {
-	const {youTubeVid} = data
+const Video = ({ data }) => {
+	const { youTubeVid } = data
 	const [vids, setVids] = useState(youTubeVid)
 
 	const handlePlayVid = index => {
@@ -18,7 +18,7 @@ const Video = ({data}) => {
 
 		const filtered = vids.edges.filter((vid, i) => i !== index)
 
-		const combined = {edges: [...pop, ...filtered]}
+		const combined = { edges: [...pop, ...filtered] }
 
 		setVids(combined)
 
@@ -26,7 +26,7 @@ const Video = ({data}) => {
 	}
 
 	const renderActiveVideo = () => {
-		return vids.edges.map(({node}, index) => {
+		return vids.edges.map(({ node }, index) => {
 			return (
 				<React.Fragment key={node.videoId}>
 					{index === 0 && (
@@ -45,7 +45,7 @@ const Video = ({data}) => {
 		})
 	}
 	const renderVideoLists = () => {
-		return vids.edges.map(({node}, index) => {
+		return vids.edges.map(({ node }, index) => {
 			return (
 				<React.Fragment key={node.videoId}>
 					{index !== 0 && (

@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import MenuBar from './components/MenuBar/index'
 import SideBar from './components/SideBar/index'
@@ -38,7 +38,7 @@ class Navbar extends Component {
 	}
 
 	render() {
-		const {sideDrawer} = this.state
+		const { sideDrawer } = this.state
 
 		return (
 			<>

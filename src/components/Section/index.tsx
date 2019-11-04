@@ -4,7 +4,7 @@ import './styles.scss'
 interface Props {
 	isBlog?: boolean
 }
-const Section: React.FC<Props> = ({children, isBlog}) => {
+const Section: React.FC<Props> = ({ children, isBlog }) => {
 	const styles = classNames({
 		section: true,
 		'section--blog-post': isBlog,

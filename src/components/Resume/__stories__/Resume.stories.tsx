@@ -1,7 +1,6 @@
 import React from 'react'
 
-import {storiesOf} from '@storybook/react'
-import {jsxDecorator} from 'storybook-addon-jsx'
+import { storiesOf } from '@storybook/react'
 
 import Resume from '..'
 
@@ -41,15 +40,13 @@ const luottamustoimet = [
 	'Oulun Seudun Perhokalastajat ry hallituksen jäsen 2011-2012, 2017- ',
 	'Suomen Pokerinpelaajat ry hallituksen jäsen 2014 –',
 ]
-storiesOf('Resume', module)
-	.addDecorator(jsxDecorator)
-	.add('with props', () => (
-		<div style={{marginTop: '4rem'}}>
-			<Resume
-				opinnot={opinnot}
-				varusmies={varusmiespalvelus}
-				tyo={tyoelamassa}
-				luottamus={luottamustoimet}
-			/>
-		</div>
-	))
+storiesOf('Resume', module).add('with props', () => (
+	<div style={{ marginTop: '4rem' }}>
+		<Resume
+			opinnot={opinnot}
+			varusmies={varusmiespalvelus}
+			tyo={tyoelamassa}
+			luottamus={luottamustoimet}
+		/>
+	</div>
+))

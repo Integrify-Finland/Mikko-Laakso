@@ -1,5 +1,5 @@
 import React from 'react'
-import {BLOCKS, MARKS, INLINES} from '@contentful/rich-text-types'
+import { BLOCKS, MARKS, INLINES } from '@contentful/rich-text-types'
 import {
 	Bold,
 	Italic,

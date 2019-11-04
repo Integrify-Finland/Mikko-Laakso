@@ -1,4 +1,4 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import './styles.scss'
 
@@ -36,8 +36,8 @@ class Facebook extends Component {
 	}
 
 	render() {
-		const {width, height} = this.state
-		const {facebookPage} = this.props
+		const { width, height } = this.state
+		const { facebookPage } = this.props
 
 		return (
 			<div className="fb-column">

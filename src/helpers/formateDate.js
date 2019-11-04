@@ -4,8 +4,8 @@ const formatDate = (date, format = 'short', locale = 'en-GB') => {
 		const formattedDate = dateObj.toLocaleDateString(
 			locale,
 			format === 'short'
-				? {month: 'short', day: '2-digit'}
-				: {year: 'numeric', month: '2-digit', day: '2-digit'},
+				? { month: 'short', day: '2-digit' }
+				: { year: 'numeric', month: '2-digit', day: '2-digit' },
 		)
 		return formattedDate.replace(/\//g, '.')
 	} catch (error) {
