@@ -1,11 +1,9 @@
 import React from 'react'
 
-import {storiesOf} from '@storybook/react'
-import {jsxDecorator} from 'storybook-addon-jsx'
+import { storiesOf } from '@storybook/react'
 
 import Button from '..'
 storiesOf('Button', module)
-	.addDecorator(jsxDecorator)
 	.add('orange', () => (
 		<Button
 			label="Tilaa uutiskirje →"

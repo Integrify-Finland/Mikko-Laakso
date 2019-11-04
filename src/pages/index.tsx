@@ -1,21 +1,67 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
-import Image from '../components/Image'
-import SEO from '../components/Seo'
+import SEO from '../components/SEO'
+import SocialMedia from '../components/SocialMedia/index'
+import Section from '../components/Section'
+import Header from '../components/Header'
 
-const IndexPage = () => (
-	<Layout>
-		<SEO title="Home" />
-		<h1>Hi people</h1>
-		<p>Welcome to your new Gatsby site.</p>
-		<p>Now go build something great.</p>
-		<div style={{maxWidth: `300px`, marginBottom: `1.45rem`}}>
-			<Image />
-		</div>
-		<Link to="/page-2/">Go to page 2</Link>
-	</Layout>
-)
+const IndexPage: React.FC = () => {
+	return (
+		<Layout>
+			<SEO title="Etusivu" />
+			<Header
+				isAbout={false}
+				Subtext={
+					'Kansanedustaja, yhteiskuntatieteiden maisteri ja intohimoinen perhokalastaja.'
+				}
+			/>
+			<div className="index-page-wrapper">
+				<Section>
+					<SocialMedia />
+				</Section>
+			</div>
+		</Layout>
+	)
+}
 
 export default IndexPage
+
+export const query = graphql`
+	query {
+		contentfulBlog: allContentfulBlogPost(
+			sort: { fields: [createdAt], order: DESC }
+		) {
+			edges {
+				node {
+					title
+					tags
+					entryDescription {
+						entryDescription
+					}
+					# body {
+					# 	childMarkdownRemark {
+					# 		html
+					# 	}
+					# }
+					categories
+					id
+					slug
+					date
+					entryImage {
+						fluid {
+							base64
+							aspectRatio
+							src
+							srcSet
+							srcWebp
+							srcSetWebp
+							sizes
+						}
+					}
+				}
+			}
+		}
+	}
+`

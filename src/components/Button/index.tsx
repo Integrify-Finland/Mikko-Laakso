@@ -10,7 +10,13 @@ interface Props {
 	onClick?: () => void
 }
 
-const Button = ({variant, label, size, disabled, onClick}: Props) => {
+const Button: React.FC<Props> = ({
+	variant,
+	label,
+	size,
+	disabled,
+	onClick,
+}) => {
 	const classes = classNames({
 		button: true,
 		'button--primary': variant === 'primary',
