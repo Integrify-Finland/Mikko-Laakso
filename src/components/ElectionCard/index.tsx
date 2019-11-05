@@ -2,12 +2,19 @@ import React, { FC } from 'react'
 import { Link } from 'gatsby'
 import './styles.scss'
 interface Props {
+	/** Background image of card */
 	backGroundImage: string
+	/** Title of eclection theme article */
 	title: string
+	/** Highlighted statement in article */
 	emphasisStatement: string
+	/** Article content */
 	description: string
+	/** Published date */
 	date: string
+	/** Name of author */
 	author: string
+	/** Link to Election theme page to view full content */
 	url: string
 }
 const ElectionCard: FC<Props> = ({
