@@ -1,5 +1,5 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 const Logo = require('../assets/logo.svg')
 import FacebookIcon from '../../../SocialMediaIcons/Facebook/index'
 import TwitterIcon from '../../../SocialMediaIcons/Twitter/index'
@@ -9,7 +9,7 @@ import './styles.scss'
 interface Props {
 	toggleMenu: () => void
 }
-const MenuBar: React.FC<Props> = ({toggleMenu}) => (
+const MenuBar: React.FC<Props> = ({ toggleMenu }) => (
 	<div className="navbar__wrapper">
 		<nav className="navbar">
 			<div className="navbar__logo">

@@ -1,13 +1,7 @@
 import React from 'react'
 
-import {storiesOf} from '@storybook/react'
-import {jsxDecorator} from 'storybook-addon-jsx'
+import { storiesOf } from '@storybook/react'
 
 import Navbar from '..'
 
-storiesOf('Navigation', module)
-	.addDecorator(jsxDecorator)
-	.add('Navbar', () => <Navbar />)
-	.add('mobile', () => <Navbar />, {
-		viewport: 'iphone8p',
-	})
+storiesOf('Navigation', module).add('Navbar', () => <Navbar />)

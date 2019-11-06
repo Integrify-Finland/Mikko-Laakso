@@ -6,7 +6,7 @@ interface Props {
 	columns: number
 }
 
-const ColumnsGrid: React.FC<Props> = ({children, columns = 0}) => {
+const ColumnsGrid: React.FC<Props> = ({ children, columns = 0 }) => {
 	const grid = classNames({
 		'grid-container': true,
 		[`grid-container--${columns}`]: columns,

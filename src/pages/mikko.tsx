@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -45,8 +45,8 @@ interface Data {
 		}
 	}
 }
-const Janne: React.FC<Data> = ({data}) => {
-	const {resume, DetailsAboutMe, aboutMe} = data
+const Janne: React.FC<Data> = ({ data }) => {
+	const { resume, DetailsAboutMe, aboutMe } = data
 	const revertedDetails = DetailsAboutMe.edges.reverse()
 	return (
 		<Layout>
@@ -60,7 +60,7 @@ const Janne: React.FC<Data> = ({data}) => {
 				koulutus={aboutMe.koulutus}
 			/>
 			<Section>
-				{revertedDetails.map(({node}: Node, i: number) => {
+				{revertedDetails.map(({ node }: Node, i: number) => {
 					return i % 2 !== 0 ? (
 						<AboutTextBlock
 							title={node.title}
@@ -105,7 +105,7 @@ export const query = graphql`
 		}
 
 		DetailsAboutMe: allContentfulDetailsAboutMe(
-			sort: {fields: [dateForOrder], order: DESC}
+			sort: { fields: [dateForOrder], order: DESC }
 		) {
 			edges {
 				node {

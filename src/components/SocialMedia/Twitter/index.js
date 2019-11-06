@@ -1,5 +1,5 @@
 /* eslint-disable no-underscore-dangle */
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 import './styles.scss'
 
@@ -31,7 +31,7 @@ class Twitter extends Component {
 	}
 
 	render() {
-		const {twitterURL} = this.props
+		const { twitterURL } = this.props
 		return (
 			<div className="twitter-column">
 				<h3 className="twitter-column__title">Twitter</h3>

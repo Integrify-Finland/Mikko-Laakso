@@ -5,7 +5,7 @@ interface Props {
 	tyo: string[]
 	luottamus: string[]
 }
-const Resume: React.FC<Props> = ({opinnot, tyo, luottamus}) => {
+const Resume: React.FC<Props> = ({ opinnot, tyo, luottamus }) => {
 	return (
 		<>
 			<h1 className="resume--title">Ansioluettelo</h1>

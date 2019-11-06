@@ -1,10 +1,8 @@
 import React from 'react'
-import {storiesOf} from '@storybook/react'
-import {jsxDecorator} from 'storybook-addon-jsx'
+import { storiesOf } from '@storybook/react'
 const imageFile = require('../assets/gatsby-astronaut.png')
 import AboutTextBlock from '..'
 storiesOf('AboutTextBlock', module)
-	.addDecorator(jsxDecorator)
 	.add('Text left', () => (
 		<AboutTextBlock
 			title="Title goes here"

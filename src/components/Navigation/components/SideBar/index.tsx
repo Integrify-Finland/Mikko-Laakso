@@ -1,15 +1,15 @@
 import React from 'react'
-import {Link} from 'gatsby'
+import { Link } from 'gatsby'
 import classNames from 'classnames'
 import './styles.scss'
 interface Props {
 	show: boolean
 	toggleMenu: () => void
 }
-const SideBar: React.FC<Props> = ({show, toggleMenu}) => {
+const SideBar: React.FC<Props> = ({ show, toggleMenu }) => {
 	return (
 		<aside>
-			<div className={classNames('mobile-menu', {'mobile-menu--open': show})}>
+			<div className={classNames('mobile-menu', { 'mobile-menu--open': show })}>
 				<div
 					className="mobile-menu__close"
 					onKeyPress={toggleMenu}

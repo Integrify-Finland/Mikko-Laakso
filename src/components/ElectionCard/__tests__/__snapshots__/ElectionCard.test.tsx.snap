@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ElectionCard /> should render 1`] = `
+<div>
+  <div
+    class="blog-card"
+  >
+    <div
+      class="meta"
+    >
+      <div
+        class="photo"
+        style="background-image: url(https://mikkolaakso.com/wp-content/uploads/2015/08/Espoon_Tapiola_kes%C3%A4ll%C3%A4.jpg);"
+      />
+      <ul
+        class="details"
+      >
+        <li
+          class="author"
+        >
+          Mikko Laakso
+        </li>
+        <li
+          class="date"
+        >
+          5th Nov 2019
+        </li>
+      </ul>
+    </div>
+    <div
+      class="description"
+    >
+      <h1>
+        Itsenäisen Espoon puolesta
+      </h1>
+      <h2>
+        Itsenäinen Espoo on metropolialueen kehityksen etu.
+      </h2>
+      <p>
+         
+        Espoolaisten kuntapäättäjien tulee antaa voimakas viesti sen puolesta, ettei ole kenenkään edun mukaista rakentaa pääkaupunkiseudulle uutta tehotonta mammuttikuntaa.
+      </p>
+      <p
+        class="read-more"
+      >
+        <a
+          class="link"
+          href="/"
+        >
+          Read More
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
+`;
