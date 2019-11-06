@@ -26,31 +26,16 @@ const SideBar: React.FC<Props> = ({ show, toggleMenu }) => {
 					<Link to="/mikko" className="mobile-menu__nav-link">
 						Mikko
 					</Link>
-					<Link
-						to="/blogi"
-						className="mobile-menu__nav-link"
-						activeClassName="mobile-menu__nav-link--active"
+
+					<a
+						href="https://puheenvuoro.uusisuomi.fi/mikkolaakso"
+						className="navbar__nav-link"
 					>
 						Blogi
-					</Link>
-					<Link
-						to="/videot"
-						className="mobile-menu__nav-link"
-						activeClassName="mobile-menu__nav-link--active"
-					>
-						Videot
-					</Link>
+					</a>
 
 					<Link to="/medialle" className="mobile-menu__nav-link">
 						Medialle
-					</Link>
-
-					<Link
-						to="/yhteys"
-						className="mobile-menu__nav-link"
-						activeClassName="mobile-menu__nav-link--active"
-					>
-						Yhteystiedot
 					</Link>
 				</div>
 			</div>
