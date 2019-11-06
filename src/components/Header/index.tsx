@@ -9,27 +9,21 @@ interface Props {
 	Headline?: string
 	Subtext?: string
 	isAbout?: boolean
-	Kotipaikka?: string
-	Syntynyt?: string
-	Perhe?: string
-	Sotilasarvo_aselinja?: string
-	Ammatti?: string
-	Harrastukset?: string
-	Koulutus?: string
-	Luottamustehtava?: string
+	kotipaikka?: string
+	syntynyt?: string
+	ammatti?: string
+	harrastukset?: string
+	koulutus?: string[]
 }
 const Header: React.FC<Props> = ({
 	Headline,
 	Subtext,
 	isAbout,
-	Kotipaikka,
-	Syntynyt,
-	Perhe,
-	Sotilasarvo_aselinja,
-	Ammatti,
-	Harrastukset,
-	Koulutus,
-	Luottamustehtava,
+	kotipaikka,
+	syntynyt,
+	ammatti,
+	harrastukset,
+	koulutus = [''],
 }) => {
 	const [animationStage] = useState('initial')
 
@@ -65,28 +59,23 @@ const Header: React.FC<Props> = ({
 					<div className="about-header__textbox">
 						<img src={Logo} alt="Janne Heikkinen logo" />
 						<h3>Kotipaikka:</h3>
-						<p>{Kotipaikka}</p>
+						<p>{kotipaikka}</p>
 
 						<h3>Syntynyt:</h3>
-						<p>{Syntynyt}</p>
-
-						<h3>Perhe:</h3>
-						<p>{Perhe}</p>
-
-						<h3>Sotilasarvo ja aselaji:</h3>
-						<p>{Sotilasarvo_aselinja}</p>
+						<p>{syntynyt}</p>
 
 						<h3>Ammatti:</h3>
-						<p>{Ammatti}</p>
+						<p>{ammatti}</p>
 
 						<h3>Harrastukset:</h3>
-						<p>{Harrastukset}</p>
+						<p>{harrastukset}</p>
 
 						<h3>Koulutus:</h3>
-						<p>{Koulutus}</p>
-
-						<h3>Nykyinen luottamustehtävä:</h3>
-						<p>{Luottamustehtava}</p>
+						<ul>
+							{koulutus.map((el: string, i: number) => (
+								<li key={i}>{el}</li>
+							))}
+						</ul>
 					</div>
 				</header>
 			</div>

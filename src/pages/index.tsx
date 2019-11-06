@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+// import {graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -28,40 +28,40 @@ const IndexPage: React.FC = () => {
 
 export default IndexPage
 
-export const query = graphql`
-	query {
-		contentfulBlog: allContentfulBlogPost(
-			sort: {fields: [createdAt], order: DESC}
-		) {
-			edges {
-				node {
-					title
-					tags
-					entryDescription {
-						entryDescription
-					}
-					# body {
-					# 	childMarkdownRemark {
-					# 		html
-					# 	}
-					# }
-					categories
-					id
-					slug
-					date
-					entryImage {
-						fluid {
-							base64
-							aspectRatio
-							src
-							srcSet
-							srcWebp
-							srcSetWebp
-							sizes
-						}
-					}
-				}
-			}
-		}
-	}
-`
+// export const query = graphql`
+// 	query {
+// 		contentfulBlog: allContentfulBlogPost(
+// 			sort: {fields: [createdAt], order: DESC}
+// 		) {
+// 			edges {
+// 				node {
+// 					title
+// 					tags
+// 					entryDescription {
+// 						entryDescription
+// 					}
+// 					# body {
+// 					# 	childMarkdownRemark {
+// 					# 		html
+// 					# 	}
+// 					# }
+// 					categories
+// 					id
+// 					slug
+// 					date
+// 					entryImage {
+// 						fluid {
+// 							base64
+// 							aspectRatio
+// 							src
+// 							srcSet
+// 							srcWebp
+// 							srcSetWebp
+// 							sizes
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// `

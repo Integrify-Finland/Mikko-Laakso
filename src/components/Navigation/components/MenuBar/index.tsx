@@ -28,11 +28,11 @@ const MenuBar: React.FC<Props> = ({toggleMenu}) => (
 				</Link>
 
 				<Link
-					to="/janne"
+					to="/mikko"
 					className="navbar__nav-link"
 					activeClassName="navbar__nav-link--active"
 				>
-					Janne
+					Mikko
 				</Link>
 
 				<Link
@@ -69,7 +69,7 @@ const MenuBar: React.FC<Props> = ({toggleMenu}) => (
 			</div>
 			<div className="navbar__links">
 				<a
-					href="https://www.facebook.com/janneheikkinenpage/"
+					href="https://www.facebook.com/mikkolaaksokok/"
 					className="navbar__nav-media-link"
 					target="blank"
 					rel="noopener"
@@ -79,7 +79,7 @@ const MenuBar: React.FC<Props> = ({toggleMenu}) => (
 				</a>
 
 				<a
-					href="https://twitter.com/heikkinenjanne"
+					href="https://twitter.com/mikkolaakso"
 					className="navbar__nav-media-link"
 					target="blank"
 					rel="noopener"
@@ -89,7 +89,7 @@ const MenuBar: React.FC<Props> = ({toggleMenu}) => (
 				</a>
 
 				<a
-					href="https://www.instagram.com/janneheikkinen/"
+					href="https://www.instagram.com/mikkolaakso/"
 					className="navbar__nav-media-link"
 					target="blank"
 					rel="noopener"

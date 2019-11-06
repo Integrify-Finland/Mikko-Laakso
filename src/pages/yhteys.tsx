@@ -1,5 +1,5 @@
 import React from 'react'
-import {graphql} from 'gatsby'
+// import {graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -16,17 +16,17 @@ const Yhteys: React.FC = () => {
 
 export default Yhteys
 
-export const query = graphql`
-	query {
-		contactUs: allContentfulContactUs {
-			edges {
-				node {
-					name
-					title
-					phoneNumber
-					email
-				}
-			}
-		}
-	}
-`
+// export const query = graphql`
+// 	query {
+// 		contactUs: allContentfulContactUs {
+// 			edges {
+// 				node {
+// 					name
+// 					title
+// 					phoneNumber
+// 					email
+// 				}
+// 			}
+// 		}
+// 	}
+// `

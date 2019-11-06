@@ -6,8 +6,8 @@ import Twitter from './Twitter'
 import Instagram from './Instagram/index'
 import ColumnsGrid from '../ColumnsGrid/index'
 
-const twitterURL = 'https://twitter.com/heikkinenjanne'
-const facebookPage = 'janneheikkinenpage'
+const twitterURL = 'https://twitter.com/mikkolaakso'
+const facebookPage = 'mikkolaaksokok'
 // interface Props {
 // 	facebookPage: string
 // 	twitterURL: string

@@ -60,7 +60,6 @@
 
 	img {
 		align-self: center;
-		height: 100%;
 		max-width: 25%;
 		@include for-tablet-portrait-down {
 			margin: $spacing-01 auto;

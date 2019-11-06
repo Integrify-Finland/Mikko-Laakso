@@ -21,16 +21,7 @@ const Layout: React.FC = ({children}) => {
 			<Navigation />
 			<main>{children}</main>
 
-			<Footer
-				firstPersonName="Janne Heikkinen"
-				firstPersonTitle="Kansanedustaja"
-				firstPersonPhone="+358 (0) 40 5554263"
-				firstPersonEmail="janne.heikkinen (at) eduskunta.fi"
-				secondPersonName="Mikko Laakso"
-				secondPersonTitle="Kansanedustajan avustaja"
-				secondPersonPhone="+358 (0) 50 383 9432"
-				secondPersonEmail="mikko.laakso (at) eduskunta.fi"
-			/>
+			<Footer />
 		</>
 	)
 }
