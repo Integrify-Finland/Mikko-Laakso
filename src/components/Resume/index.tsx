@@ -2,11 +2,10 @@ import * as React from 'react'
 import './styles.scss'
 interface Props {
 	opinnot: string[]
-	varusmies: string[]
 	tyo: string[]
 	luottamus: string[]
 }
-const Resume: React.FC<Props> = ({ opinnot, varusmies, tyo, luottamus }) => {
+const Resume: React.FC<Props> = ({ opinnot, tyo, luottamus }) => {
 	return (
 		<>
 			<h1 className="resume--title">Ansioluettelo</h1>
@@ -20,14 +19,7 @@ const Resume: React.FC<Props> = ({ opinnot, varusmies, tyo, luottamus }) => {
 							))}
 						</ul>
 					</div>
-					<div className="resume__col-1--wrapper">
-						<h1>Varusmiespalvelus</h1>
-						<ul>
-							{varusmies.map((el, i) => (
-								<li key={i}>{el}</li>
-							))}
-						</ul>
-					</div>
+
 					<div className="resume__col-1--wrapper">
 						<h1>Työelämässä</h1>
 						<ul>

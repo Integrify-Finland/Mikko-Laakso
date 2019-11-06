@@ -23,8 +23,8 @@ const SideBar: React.FC<Props> = ({ show, toggleMenu }) => {
 					<Link to="/" className="mobile-menu__nav-link">
 						Etusivu
 					</Link>
-					<Link to="/janne" className="mobile-menu__nav-link">
-						Janne
+					<Link to="/mikko" className="mobile-menu__nav-link">
+						Mikko
 					</Link>
 					<Link
 						to="/blogi"

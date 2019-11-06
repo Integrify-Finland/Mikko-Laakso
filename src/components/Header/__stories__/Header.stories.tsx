@@ -12,13 +12,10 @@ storiesOf('Header', module)
 	.add('About Header', () => (
 		<Header
 			isAbout={true}
-			Kotipaikka="Heinäpää, Oulu"
-			Syntynyt="1990 Oulussa"
-			Perhe="Avovaimo Mira sekä äiti Sirpa, isä Kari, sisko Sanni ja veli Matti sekä pohjanpystykorva Sissi."
-			Sotilasarvo_aselinja="jääkäri, sissi"
-			Ammatti="Viestinnän suunnittelija"
-			Harrastukset="Salibandy, sulkapallo, kalastus, tennis"
-			Koulutus="Yhteiskuntatieteiden maisteri Jyväskylän yliopistosta"
-			Luottamustehtava="Kansanedustaja, kaupunginvaltuutettu"
+			kotipaikka="Heinäpää, Oulu"
+			syntynyt="1990 Oulussa"
+			ammatti="Viestinnän suunnittelija"
+			koulutus={['Yhteiskuntatieteiden maisteri Jyväskylän yliopistosta']}
+			harrastukset="test"
 		/>
 	))

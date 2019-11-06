@@ -38,14 +38,6 @@ module.exports = {
 				includePaths: ['src/assets/styles'],
 			},
 		},
-		// {
-		// 	resolve: `gatsby-source-youtube-v2`,
-		// 	options: {
-		// 		channelId: process.env.YOUTUBE_CHANNEL_ID,
-		// 		apiKey: process.env.YOUTUBE_API_KEY,
-		// 		maxVideos: 50, // Defaults to 50
-		// 	},
-		// },
 		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,

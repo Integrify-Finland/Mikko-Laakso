@@ -9,9 +9,7 @@ const opinnot = [
 	'Politiikan Approbatur 2011',
 	'Kempeleen lukio, Ylioppilas 2009',
 ]
-const varusmiespalvelus = [
-	'Jääkäri, Sissikomppania, Sodankylän Jääkäriprikaati 2009',
-]
+
 const tyoelamassa = [
 	'Viestinnän suunnittelija, Elinkeinoelämän valtuuskunta EVA 2016-2018',
 	'Yrittäjä, Salibandykauppa Avoin Yhtiö 2009-2010',
@@ -42,11 +40,6 @@ const luottamustoimet = [
 ]
 storiesOf('Resume', module).add('with props', () => (
 	<div style={{ marginTop: '4rem' }}>
-		<Resume
-			opinnot={opinnot}
-			varusmies={varusmiespalvelus}
-			tyo={tyoelamassa}
-			luottamus={luottamustoimet}
-		/>
+		<Resume opinnot={opinnot} tyo={tyoelamassa} luottamus={luottamustoimet} />
 	</div>
 ))

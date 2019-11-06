@@ -34,13 +34,13 @@ interface Data {
 			edges: Node[]
 		}
 		aboutMe: {
-			kotiPaikka: string
+			kotipaikka: string
 			syntynyt: string
 			perhe: string
 			sotilasarvo: string
 			ammatti: string
 			harrastukset: string
-			koulutus: string
+			koulutus: string[]
 			luottamustehtava: string
 		}
 	}
@@ -50,17 +50,14 @@ const Janne: React.FC<Data> = ({ data }) => {
 	const revertedDetails = DetailsAboutMe.edges.reverse()
 	return (
 		<Layout>
-			<SEO title="Janne" />
+			<SEO title="Mikko" />
 			<Header
 				isAbout={true}
-				Kotipaikka={aboutMe.kotiPaikka}
-				Syntynyt={aboutMe.syntynyt}
-				Perhe={aboutMe.perhe}
-				Sotilasarvo_aselinja={aboutMe.sotilasarvo}
-				Ammatti={aboutMe.ammatti}
-				Harrastukset={aboutMe.harrastukset}
-				Koulutus={aboutMe.koulutus}
-				Luottamustehtava={aboutMe.luottamustehtava}
+				kotipaikka={aboutMe.kotipaikka}
+				syntynyt={aboutMe.syntynyt}
+				ammatti={aboutMe.ammatti}
+				harrastukset={aboutMe.harrastukset}
+				koulutus={aboutMe.koulutus}
 			/>
 			<Section>
 				{revertedDetails.map(({ node }: Node, i: number) => {
@@ -83,7 +80,6 @@ const Janne: React.FC<Data> = ({ data }) => {
 			</Section>
 			<Resume
 				opinnot={resume.opinnot}
-				varusmies={resume.varusmiespalvelus}
 				tyo={resume.tyoelamassa}
 				luottamus={resume.luottamustoimet}
 			/>
@@ -111,7 +107,6 @@ export default Janne
 // 			koulutus
 // 			luottamustehtava
 // 		}
-
 // 		DetailsAboutMe: allContentfulDetailsAboutMe(
 // 			sort: { fields: [dateForOrder], order: DESC }
 // 		) {

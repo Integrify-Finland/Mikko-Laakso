@@ -1,5 +1,5 @@
 import React from 'react'
-// import { graphql } from 'gatsby'
+// import {graphql} from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
@@ -31,7 +31,7 @@ export default IndexPage
 // export const query = graphql`
 // 	query {
 // 		contentfulBlog: allContentfulBlogPost(
-// 			sort: { fields: [createdAt], order: DESC }
+// 			sort: {fields: [createdAt], order: DESC}
 // 		) {
 // 			edges {
 // 				node {
