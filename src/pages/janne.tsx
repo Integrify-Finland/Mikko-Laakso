@@ -93,42 +93,42 @@ const Janne: React.FC<Data> = ({ data }) => {
 
 export default Janne
 
-export const query = graphql`
-	query {
-		resume: contentfulResume {
-			opinnot
-			varusmiespalvelus
-			tyoelamassa
-			luottamustoimet
-		}
-		aboutMe: contentfulAboutMe {
-			kotiPaikka
-			syntynyt
-			perhe
-			sotilasarvo
-			ammatti
-			harrastukset
-			koulutus
-			luottamustehtava
-		}
+// export const query = graphql`
+// 	query {
+// 		resume: contentfulResume {
+// 			opinnot
+// 			varusmiespalvelus
+// 			tyoelamassa
+// 			luottamustoimet
+// 		}
+// 		aboutMe: contentfulAboutMe {
+// 			kotiPaikka
+// 			syntynyt
+// 			perhe
+// 			sotilasarvo
+// 			ammatti
+// 			harrastukset
+// 			koulutus
+// 			luottamustehtava
+// 		}
 
-		DetailsAboutMe: allContentfulDetailsAboutMe(
-			sort: { fields: [dateForOrder], order: DESC }
-		) {
-			edges {
-				node {
-					title
-					dateForOrder
-					image {
-						file {
-							url
-						}
-					}
-					description {
-						description
-					}
-				}
-			}
-		}
-	}
-`
+// 		DetailsAboutMe: allContentfulDetailsAboutMe(
+// 			sort: { fields: [dateForOrder], order: DESC }
+// 		) {
+// 			edges {
+// 				node {
+// 					title
+// 					dateForOrder
+// 					image {
+// 						file {
+// 							url
+// 						}
+// 					}
+// 					description {
+// 						description
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// `

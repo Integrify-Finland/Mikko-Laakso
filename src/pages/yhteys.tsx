@@ -16,17 +16,17 @@ const Yhteys: React.FC = () => {
 
 export default Yhteys
 
-export const query = graphql`
-	query {
-		contactUs: allContentfulContactUs {
-			edges {
-				node {
-					name
-					title
-					phoneNumber
-					email
-				}
-			}
-		}
-	}
-`
+// export const query = graphql`
+// 	query {
+// 		contactUs: allContentfulContactUs {
+// 			edges {
+// 				node {
+// 					name
+// 					title
+// 					phoneNumber
+// 					email
+// 				}
+// 			}
+// 		}
+// 	}
+// `

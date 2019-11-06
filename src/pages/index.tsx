@@ -28,40 +28,40 @@ const IndexPage: React.FC = () => {
 
 export default IndexPage
 
-export const query = graphql`
-	query {
-		contentfulBlog: allContentfulBlogPost(
-			sort: { fields: [createdAt], order: DESC }
-		) {
-			edges {
-				node {
-					title
-					tags
-					entryDescription {
-						entryDescription
-					}
-					# body {
-					# 	childMarkdownRemark {
-					# 		html
-					# 	}
-					# }
-					categories
-					id
-					slug
-					date
-					entryImage {
-						fluid {
-							base64
-							aspectRatio
-							src
-							srcSet
-							srcWebp
-							srcSetWebp
-							sizes
-						}
-					}
-				}
-			}
-		}
-	}
-`
+// export const query = graphql`
+// 	query {
+// 		contentfulBlog: allContentfulBlogPost(
+// 			sort: { fields: [createdAt], order: DESC }
+// 		) {
+// 			edges {
+// 				node {
+// 					title
+// 					tags
+// 					entryDescription {
+// 						entryDescription
+// 					}
+// 					# body {
+// 					# 	childMarkdownRemark {
+// 					# 		html
+// 					# 	}
+// 					# }
+// 					categories
+// 					id
+// 					slug
+// 					date
+// 					entryImage {
+// 						fluid {
+// 							base64
+// 							aspectRatio
+// 							src
+// 							srcSet
+// 							srcWebp
+// 							srcSetWebp
+// 							sizes
+// 						}
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// `

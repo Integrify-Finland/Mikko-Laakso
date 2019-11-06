@@ -48,24 +48,24 @@ const Medialle = ({ data }: DataProps) => {
 
 export default Medialle
 
-export const query = graphql`
-	query {
-		forMedia: contentfulForTheMedia {
-			description {
-				id
-				description
-			}
-			pictures {
-				fluid(maxWidth: 3200, quality: 100) {
-					base64
-					aspectRatio
-					src
-					srcSet
-					srcWebp
-					srcSetWebp
-					sizes
-				}
-			}
-		}
-	}
-`
+// export const query = graphql`
+// 	query {
+// 		forMedia: contentfulForTheMedia {
+// 			description {
+// 				id
+// 				description
+// 			}
+// 			pictures {
+// 				fluid(maxWidth: 3200, quality: 100) {
+// 					base64
+// 					aspectRatio
+// 					src
+// 					srcSet
+// 					srcWebp
+// 					srcSetWebp
+// 					sizes
+// 				}
+// 			}
+// 		}
+// 	}
+// `
