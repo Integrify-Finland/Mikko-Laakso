@@ -28,25 +28,25 @@ const ElectionCard: FC<Props> = ({
 }) => {
 	return (
 		<div className="blog-card">
-			<div className="meta">
+			<div className="blog-card__meta">
 				<div
-					className="photo"
+					className="blog-card__photo"
 					style={{
 						backgroundImage: `url(${backGroundImage})`,
 					}}
 				/>
 
-				<ul className="details">
+				<ul className="blog-card__details">
 					<li className="author">{author}</li>
 					<li className="date">{date}</li>
 				</ul>
 			</div>
-			<div className="description">
+			<div className="blog-card__description">
 				<h1>{title}</h1>
 				<h2>{emphasisStatement}</h2>
 				<p> {description}</p>
 
-				<p className="read-more">
+				<p className="blog-card__read-more">
 					<Link className="link" to={url}>
 						Read More
 					</Link>
