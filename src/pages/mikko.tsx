@@ -78,6 +78,7 @@ const Janne: React.FC<Data> = ({ data }) => {
 					)
 				})}
 			</Section>
+
 			<Resume
 				opinnot={resume.opinnot}
 				tyo={resume.tyoelamassa}
