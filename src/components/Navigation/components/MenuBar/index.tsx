@@ -14,7 +14,7 @@ const MenuBar: React.FC<Props> = ({ toggleMenu }) => (
 		<nav className="navbar">
 			<div className="navbar__logo">
 				<Link to="/">
-					<img src={Logo} alt="Janne Heikkinen logo" />
+					<img src={Logo} alt="Mikko Laakso logo" />
 				</Link>
 			</div>
 			<div className="navbar__wrapper__links">

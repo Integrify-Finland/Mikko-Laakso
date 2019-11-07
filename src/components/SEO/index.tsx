@@ -25,7 +25,7 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
 	)
 
 	const metaDescription = description || site.siteMetadata.description
-	const URL = 'https://janneheikkinen.fi'
+	const URL = 'https://mikkolaakso.com'
 
 	return (
 		<Helmet
