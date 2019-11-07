@@ -1,13 +1,44 @@
 import React from 'react'
-// import {graphql} from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
 import SocialMedia from '../components/SocialMedia/index'
 import Section from '../components/Section'
 import Header from '../components/Header'
+import ElectionCard from '../components/ElectionCard'
 
-const IndexPage: React.FC = () => {
+import './indexPageStyle.scss'
+interface Node {
+	node: {
+		id: string
+		title: string
+		shortenContent: string
+		fullContent: {
+			fullContent: string
+		}
+		emphasisStatement: string
+		pictureForArticle: {
+			fluid: {
+				base64: string
+				aspectRatio: string
+				src: string
+				srcSet: string
+				srcWebp: string
+				srcSetWebp: string
+				sizes: string
+			}
+		}
+	}
+}
+interface Data {
+	data: {
+		allContentfulElectionTheme: {
+			edges: Node[]
+		}
+	}
+}
+const IndexPage: React.FC<Data> = ({ data }) => {
 	return (
 		<Layout>
 			<SEO title="Etusivu" />
@@ -17,8 +48,29 @@ const IndexPage: React.FC = () => {
 					'Kansanedustaja, yhteiskuntatieteiden maisteri ja intohimoinen perhokalastaja.'
 				}
 			/>
+
 			<div className="index-page-wrapper">
 				<Section>
+					<h1 className="index-page-wrapper__title">VAALITEEMAT</h1>
+				</Section>
+				<Section>
+					{data.allContentfulElectionTheme.edges.map(({ node }: Node) => {
+						return (
+							<ElectionCard
+								backGroundImage={node.pictureForArticle.fluid.src}
+								title={node.title}
+								emphasisStatement={node.emphasisStatement}
+								description={node.shortenContent}
+								date={'5th Nov 2019'}
+								author={'Mikko Laakso'}
+								url={'/'}
+								key={node.id}
+							/>
+						)
+					})}
+				</Section>
+				<Section>
+					<h1 className="index-page-wrapper__title">MEDIALLE</h1>
 					<SocialMedia />
 				</Section>
 			</div>
@@ -28,40 +80,31 @@ const IndexPage: React.FC = () => {
 
 export default IndexPage
 
-// export const query = graphql`
-// 	query {
-// 		contentfulBlog: allContentfulBlogPost(
-// 			sort: {fields: [createdAt], order: DESC}
-// 		) {
-// 			edges {
-// 				node {
-// 					title
-// 					tags
-// 					entryDescription {
-// 						entryDescription
-// 					}
-// 					# body {
-// 					# 	childMarkdownRemark {
-// 					# 		html
-// 					# 	}
-// 					# }
-// 					categories
-// 					id
-// 					slug
-// 					date
-// 					entryImage {
-// 						fluid {
-// 							base64
-// 							aspectRatio
-// 							src
-// 							srcSet
-// 							srcWebp
-// 							srcSetWebp
-// 							sizes
-// 						}
-// 					}
-// 				}
-// 			}
-// 		}
-// 	}
-// `
+export const query = graphql`
+	query MyQuery {
+		allContentfulElectionTheme(filter: {}) {
+			edges {
+				node {
+					id
+					title
+					shortenContent
+					fullContent {
+						fullContent
+					}
+					emphasisStatement
+					pictureForArticle {
+						fluid {
+							base64
+							aspectRatio
+							src
+							srcSet
+							srcWebp
+							srcSetWebp
+							sizes
+						}
+					}
+				}
+			}
+		}
+	}
+`

@@ -45,7 +45,6 @@ const ElectionCard: FC<Props> = ({
 				<h1>{title}</h1>
 				<h2>{emphasisStatement}</h2>
 				<p> {description}</p>
-
 				<p className="blog-card__read-more">
 					<Link className="link" to={url}>
 						Read More

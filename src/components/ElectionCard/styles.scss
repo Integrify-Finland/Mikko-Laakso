@@ -13,7 +13,7 @@
 	a {
 		color: inherit;
 		&:hover {
-			color: $secondary;
+			color: #6ccff6;
 		}
 	}
 
@@ -111,7 +111,7 @@
 	&__description &__read-more {
 		text-align: right;
 		.link {
-			color: $secondary;
+			color: #6ccff6;
 			display: inline-block;
 			position: relative;
 			&:after {
@@ -138,7 +138,7 @@
 				content: '';
 				position: absolute;
 				height: 5px;
-				background: $secondary;
+				background: #6ccff6;
 				width: 35px;
 				top: -0.75rem;
 				border-radius: 3px;
@@ -151,13 +151,13 @@
 
 	@media (min-width: 640px) {
 		flex-direction: row;
-		max-width: 700px;
+		max-width: 900px;
 		&__meta {
-			flex-basis: 40%;
+			flex-basis: 30%;
 			height: auto;
 		}
 		&__description {
-			flex-basis: 60%;
+			flex-basis: 70%;
 			&:before {
 				transform: skewX(-3deg);
 				content: '';

@@ -1,0 +1,10 @@
+.index-page-wrapper {
+	background-color: #fff;
+	&__title {
+		text-align: center;
+		color: $primary;
+		font-size: 45px;
+		font-weight: 400;
+		text-decoration: underline #6ccff6;
+	}
+}

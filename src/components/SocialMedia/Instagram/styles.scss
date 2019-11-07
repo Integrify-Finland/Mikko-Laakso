@@ -5,6 +5,7 @@
 	&__title {
 		@include font-size-m;
 		text-align: center;
+		color: $primary;
 	}
 
 	#instafeed {
