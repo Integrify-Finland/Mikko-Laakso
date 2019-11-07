@@ -43,7 +43,7 @@ class Twitter extends Component {
 					href={twitterURL}
 					target="blank"
 				>
-					Tweets by Janne Heikkinen
+					Tweets by Mikko Laakso
 				</a>
 			</div>
 		)

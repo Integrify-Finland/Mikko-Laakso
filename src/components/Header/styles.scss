@@ -369,7 +369,7 @@
 	background-position: left top;
 	display: flex;
 	justify-content: flex-end;
-	border-bottom: 20px $secondary solid;
+	border-bottom: 10px $secondary solid;
 	height: 500px;
 	@include for-ipad-pro-big-landscape {
 		background-position: 60% 0%;
@@ -399,8 +399,8 @@
 	}
 
 	&__textbox {
-		background-color: #023b56d0;
-		color: $white;
+		background-color: rgba(234, 231, 220, 0.5);
+		color: #707070;
 		max-width: 37%;
 		height: 420px;
 		padding: $spacing-02-50 $spacing-03;

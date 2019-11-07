@@ -45,7 +45,7 @@ interface Data {
 		}
 	}
 }
-const Janne: React.FC<Data> = ({ data }) => {
+const Mikko: React.FC<Data> = ({ data }) => {
 	const { resume, DetailsAboutMe, aboutMe } = data
 	const revertedDetails = DetailsAboutMe.edges.reverse()
 	return (
@@ -88,7 +88,7 @@ const Janne: React.FC<Data> = ({ data }) => {
 	)
 }
 
-export default Janne
+export default Mikko
 
 export const query = graphql`
 	query {
