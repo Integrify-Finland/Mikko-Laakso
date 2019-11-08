@@ -11,6 +11,7 @@
 	border-radius: 5px;
 	overflow: hidden;
 	z-index: 0;
+
 	a {
 		color: inherit;
 		&:hover {
@@ -146,7 +147,7 @@
 		left: 0%;
 	}
 
-	@media (min-width: 640px) {
+	@media (min-width: 900px) {
 		flex-direction: row;
 		max-width: 900px;
 		&__meta {
@@ -180,5 +181,8 @@
 				padding-left: $spacing-01-50;
 			}
 		}
+	}
+	@include for-phone {
+		width: 90%;
 	}
 }

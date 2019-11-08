@@ -1,8 +1,56 @@
 .footer {
 	display: flex;
-	justify-content: center;
-	padding-bottom: $spacing-02;
+	justify-content: space-between;
+	color: $primary;
+	flex-direction: row;
+	@include for-phone {
+		flex-direction: column;
+	}
 	img {
 		height: 100px;
+		align-self: center;
+		margin-right: 5rem;
+		@include for-phone {
+			margin-right: 0;
+			padding: $spacing-01;
+		}
+	}
+	&__contact-container {
+		padding-left: $spacing-02;
+	}
+	&__left-box {
+		width: 50%;
+		background-color: $secondary;
+		border-radius: 0px 50px 0px 0px;
+		padding: $spacing-02 $spacing-06 0 $spacing-06;
+
+		@include for-tablet-portrait-down {
+			padding: $spacing-02 $spacing-06 0 $spacing-03;
+		}
+
+		@include for-phone-only {
+			border-radius: 0px 0px 0px 0px;
+			width: 100%;
+			padding: 0;
+		}
+	}
+
+	&__copyright {
+		@include font-size-s;
+		text-align: center;
+		margin: $spacing-04 0 $spacing-01 0;
+		font-weight: 700;
+		letter-spacing: 3px;
+	}
+
+	&__social-media {
+		margin: 0;
+		display: flex;
+		justify-content: space-between;
+		width: 12rem;
+
+		@include for-phone-only {
+			width: 100%;
+		}
 	}
 }
