@@ -21,7 +21,7 @@ interface Node {
 		pictureForArticle: {
 			fluid: {
 				base64: string
-				aspectRatio: string
+				aspectRatio: number
 				src: string
 				srcSet: string
 				srcWebp: string
@@ -44,9 +44,8 @@ const IndexPage: React.FC<Data> = ({ data }) => {
 			<SEO title="Etusivu" />
 			<Header
 				isAbout={false}
-				Subtext={
-					'Kansanedustaja, yhteiskuntatieteiden maisteri ja intohimoinen perhokalastaja.'
-				}
+				Headline="Tulosvastuu takaisin politiikkaan!"
+				Subtext="Poliitikkojen ja virkamiesten tulee kantaa vastuu tuloksistaan. On aika palauttaa tulosvastuu politiikkaan."
 			/>
 
 			<div className="index-page-wrapper">
@@ -54,20 +53,22 @@ const IndexPage: React.FC<Data> = ({ data }) => {
 					<h1 className="index-page-wrapper__title">VAALITEEMAT</h1>
 				</Section>
 				<Section>
-					{data.allContentfulElectionTheme.edges.map(({ node }: Node) => {
-						return (
-							<ElectionCard
-								backGroundImage={node.pictureForArticle.fluid.src}
-								title={node.title}
-								emphasisStatement={node.emphasisStatement}
-								description={node.shortenContent}
-								date={'5th Nov 2019'}
-								author={'Mikko Laakso'}
-								url={'/'}
-								key={node.id}
-							/>
-						)
-					})}
+					{data.allContentfulElectionTheme.edges
+						.slice(0, 3)
+						.map(({ node }: Node) => {
+							return (
+								<ElectionCard
+									backGroundImage={node.pictureForArticle.fluid}
+									title={node.title}
+									emphasisStatement={node.emphasisStatement}
+									description={node.shortenContent}
+									date={'5th Nov 2019'}
+									author={'Mikko Laakso'}
+									url={'/'}
+									key={node.id}
+								/>
+							)
+						})}
 				</Section>
 				<Section>
 					<h1 className="index-page-wrapper__title">MEDIALLE</h1>

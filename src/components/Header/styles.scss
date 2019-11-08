@@ -1,7 +1,7 @@
 .header__box {
 	position: absolute;
 	right: 5%;
-	left: 45%;
+	left: 49%;
 	top: 20%;
 
 	@include for-ipad-pro-big-portrait {
@@ -23,23 +23,17 @@
 	}
 
 	@include for-phone-only {
-		top: 39%;
-	}
-
-	@include for-phone-small-landscape {
-		right: 3%;
-		left: 40%;
-		top: 15%;
+		position: unset;
+		display: flex;
 	}
 }
 
 .header {
-	background-image: url('../Header/assets/heroBG.jpg');
+	background-image: url('../Header/assets/mikko.png');
 	background-size: cover;
-	background-attachment: fixed;
 	position: relative;
-	height: 100vh;
-
+	height: 700px;
+	background-position: center;
 	-ms-overflow-style: none; // IE 10+
 	scrollbar-width: none; // Firefox
 
@@ -60,9 +54,9 @@
 	}
 
 	@include for-phone-only {
-		height: 457px;
-		max-height: 510px;
-		background-attachment: scroll;
+		display: flex;
+		height: 100vh;
+		background-position: -270px 0px;
 		overflow: hidden;
 	}
 
@@ -74,17 +68,15 @@
 	}
 
 	&__textbox {
-		background-color: #6ccff6cc;
+		background-color: rgba(234, 231, 220, 0.9);
 		box-shadow: 0px 95px 0px #023b561a inset;
 		border-radius: 0px 0px 0px 50px;
-		color: $white;
+		color: $primary;
 		position: relative;
 		margin-bottom: $spacing-02;
 		padding: $spacing-01;
 		font-family: $font-family;
 		z-index: 4;
-		// animation: textbox-animation 1000ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
-		//    2000ms both;
 
 		@include for-ipad-portrait-down {
 			box-shadow: 0px 90px 0px #023b561a inset;
@@ -92,15 +84,18 @@
 		}
 
 		@include for-ipad-landscape-down {
-			box-shadow: 0px 70px 0px #023b561a inset;
+			box-shadow: 0px 120px 0px #023b561a inset;
 			padding: $spacing-01;
 		}
 
 		@include for-phone-only {
-			box-shadow: 0px 50px 0px #023b561a inset;
+			box-shadow: 0px 60px 0px #023b561a inset;
+			border-radius: 0;
 			padding: $spacing-00-50 $spacing-01;
 			z-index: 2;
 			animation-delay: 3000ms;
+			margin-bottom: 0;
+			align-self: flex-end;
 		}
 	}
 
@@ -124,16 +119,13 @@
 
 	&__headline {
 		text-transform: uppercase;
-		@include font-size-l-xxxx;
+		@include font-size-l-x;
 		font-style: italic;
-		// animation: headline-animation 900ms cubic-bezier(0.68, 0.45, 0.665, 1.15)
-		//   2500ms both;
 		position: relative;
-		white-space: nowrap;
-		margin: 0;
+		// white-space: nowrap;
 
 		@include for-ipad-pro {
-			text-align: center;
+			text-align: left;
 		}
 
 		@include for-tablet-portrait-down {
@@ -147,7 +139,7 @@
 
 		@include for-phone-only {
 			text-align: center;
-			@include font-size-l-xxxx;
+			@include font-size-l;
 			animation-delay: 3500ms;
 		}
 
@@ -163,7 +155,7 @@
 	}
 
 	&__subtext {
-		@include font-size-l-xxx;
+		@include font-size-l-x;
 		line-height: $spacing-03;
 		// animation: subtext-animation 600ms cubic-bezier(0, 0.015, 0.005, 1.1) 3500ms
 		//   both;
@@ -185,7 +177,7 @@
 
 		@include for-phone-only {
 			line-height: $spacing-02;
-			@include font-size-l-xxx;
+			@include font-size-l;
 			text-align: center;
 			padding: $spacing-00-50;
 			animation-delay: 4500ms;
@@ -193,7 +185,7 @@
 
 		@include for-phone-small {
 			line-height: $spacing-02;
-			@include font-size-l-xx;
+			@include font-size-l;
 			text-align: center;
 			animation-delay: 4500ms;
 		}
