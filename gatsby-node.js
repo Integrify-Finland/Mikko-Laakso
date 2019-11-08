@@ -1,7 +1,34 @@
-/**
- * Implement Gatsby's Node APIs in this file.
- *
- * See: https://www.gatsbyjs.org/docs/node-apis/
- */
+const path = require(`path`)
 
-// You can delete this file if you're not using it
+exports.createPages = ({ graphql, actions }) => {
+	const { createPage } = actions
+
+	return graphql(`
+		{
+			allContentfulElectionTheme {
+				edges {
+					node {
+						id
+						url
+					}
+				}
+			}
+		}
+	`).then(result => {
+		result.data.allContentfulElectionTheme.edges.forEach(({ node }) => {
+			createPage({
+				path: `teemat/${node.url
+					.toLowerCase()
+					.replace(/[']/gi, '')
+					.replace(/ /gi, '-')
+					.replace(/[,]/gi, '')
+					.replace(/[ä]/gi, 'a')
+					.replace(/[ö]/gi, 'o')}`,
+				component: path.resolve(`./src/templates/electionThemePost/index.tsx`),
+				context: {
+					slug: node.id,
+				},
+			})
+		})
+	})
+}
