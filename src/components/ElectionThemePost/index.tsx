@@ -37,12 +37,8 @@ const ElectionThemePost: FC<Props> = ({
 	return (
 		<div className="election-theme-post">
 			<div className="election-theme-post__date">{date}</div>
-			<div className="__title">{title}</div>
-			<div className="election-theme-post__image">
-				<div className="election-theme-item__image">
-					<Img fluid={image} className="election-theme-item__image--fluid" />
-				</div>
-			</div>
+			<h1 className="election-theme-post__title">{title}</h1>
+			<Img fluid={image} className="election-theme-post__image" />
 			<div className="election-theme-post__content">
 				<div className="election-theme-post__content__children">
 					{fullContent}

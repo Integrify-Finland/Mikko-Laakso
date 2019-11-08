@@ -13,6 +13,7 @@ interface Node {
 	node: {
 		id: string
 		title: string
+		url: string
 		shortenContent: string
 		fullContent: {
 			fullContent: string
@@ -64,7 +65,13 @@ const IndexPage: React.FC<Data> = ({ data }) => {
 									description={node.shortenContent}
 									date={'5th Nov 2019'}
 									author={'Mikko Laakso'}
-									url={'/'}
+									url={`teemat/${node.url
+										.toLowerCase()
+										.replace(/[']/gi, '')
+										.replace(/ /gi, '-')
+										.replace(/[,]/gi, '')
+										.replace(/[ä]/gi, 'a')
+										.replace(/[ö]/gi, 'o')}`}
 									key={node.id}
 								/>
 							)
@@ -89,6 +96,7 @@ export const query = graphql`
 					id
 					title
 					shortenContent
+					url
 					fullContent {
 						fullContent
 					}

@@ -34,6 +34,13 @@ const MenuBar: React.FC<Props> = ({ toggleMenu }) => (
 					>
 						Mikko
 					</Link>
+					<Link
+						to="/teemat"
+						className="navbar__nav-link"
+						activeClassName="navbar__nav-link--active"
+					>
+						Vaaliteemat
+					</Link>
 
 					<a
 						href="https://puheenvuoro.uusisuomi.fi/mikkolaakso"
