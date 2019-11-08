@@ -15,7 +15,7 @@ const Footer: React.FC = () => {
 			<div className="footer__left-box">
 				<div className="footer__social-media">
 					<a
-						href="https://www.facebook.com/janneheikkinenpage/"
+						href="https://www.facebook.com/mikkolaaksokok/"
 						target="blank"
 						rel="noopener"
 						title="Go to Facebook"
@@ -24,7 +24,7 @@ const Footer: React.FC = () => {
 					</a>
 
 					<a
-						href="https://twitter.com/heikkinenjanne"
+						href="https://twitter.com/mikkolaakso"
 						target="blank"
 						rel="noopener"
 						title="Go to Twitter"
@@ -33,7 +33,7 @@ const Footer: React.FC = () => {
 					</a>
 
 					<a
-						href="https://www.instagram.com/janneheikkinen/"
+						href="https://www.instagram.com/mikkolaakso/"
 						target="blank"
 						rel="noopener"
 						title="Go to Instagram"

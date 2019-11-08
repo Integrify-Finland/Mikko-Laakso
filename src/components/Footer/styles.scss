@@ -16,7 +16,9 @@
 		}
 	}
 	&__contact-container {
-		padding-left: $spacing-02;
+		@include for-phone {
+			padding-left: $spacing-02;
+		}
 	}
 	&__left-box {
 		width: 50%;
@@ -48,9 +50,17 @@
 		display: flex;
 		justify-content: space-between;
 		width: 12rem;
-
+		a {
+			svg {
+				path {
+					fill: $primary;
+				}
+			}
+		}
 		@include for-phone-only {
-			width: 100%;
+			width: 30%;
+			padding-left: $spacing-02;
+			padding-top: $spacing-01;
 		}
 	}
 }
