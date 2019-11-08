@@ -1,9 +1,10 @@
 import React, { FC } from 'react'
 import { Link } from 'gatsby'
+import Img, { FluidObject } from 'gatsby-image'
 import './styles.scss'
 interface Props {
 	/** Background image of card */
-	backGroundImage: string
+	backGroundImage: FluidObject
 	/** Title of eclection theme article */
 	title: string
 	/** Highlighted statement in article */
@@ -29,13 +30,7 @@ const ElectionCard: FC<Props> = ({
 	return (
 		<div className="blog-card">
 			<div className="blog-card__meta">
-				<div
-					className="blog-card__photo"
-					style={{
-						backgroundImage: `url(${backGroundImage})`,
-					}}
-				/>
-
+				<Img fluid={backGroundImage} className="blog-card__photo" />
 				<ul className="blog-card__details">
 					<li className="author">{author}</li>
 					<li className="date">{date}</li>
@@ -55,8 +50,17 @@ const ElectionCard: FC<Props> = ({
 	)
 }
 ElectionCard.defaultProps = {
-	backGroundImage:
-		'https://mikkolaakso.com/wp-content/uploads/2015/08/Espoon_Tapiola_kes%C3%A4ll%C3%A4.jpg',
+	backGroundImage: {
+		src:
+			'https://mikkolaakso.com/wp-content/uploads/2015/08/Espoon_Tapiola_kes%C3%A4ll%C3%A4.jpg',
+		base64: '',
+		tracedSVG: '',
+		aspectRatio: 1.6,
+		srcSet: '',
+		srcWebp: '',
+		srcSetWebp: '',
+		sizes: '',
+	},
 	title: 'Itsenäisen Espoon puolesta',
 	emphasisStatement: 'Itsenäinen Espoo on metropolialueen kehityksen etu.',
 	description:

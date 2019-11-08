@@ -13,7 +13,7 @@
 	h1 {
 		@include font-size-l-xx;
 		display: inline-block;
-		color: #6ccff6;
+		color: $primary;
 		margin-right: $spacing-00-25;
 		margin-bottom: $spacing-00-25;
 

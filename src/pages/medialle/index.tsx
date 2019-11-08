@@ -20,7 +20,6 @@ interface Data {
 }
 const Medialle = ({ data }: DataProps) => {
 	const { forMedia } = data
-	console.log('forMedia:', forMedia)
 
 	return (
 		<Layout>

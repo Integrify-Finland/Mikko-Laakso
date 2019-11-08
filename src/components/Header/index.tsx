@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import classNames from 'classnames'
 import './styles.scss'
-const janneImage = require('./assets/janneHeader.png')
+
 const Logo = require('./assets/logo.svg')
 
 interface Props {
@@ -43,12 +43,6 @@ const Header: React.FC<Props> = ({
 							<p className="header__subtext">{Subtext}</p>
 						</div>
 					</div>
-
-					<img
-						alt="Janne Heikkinen"
-						className="header__image"
-						src={janneImage}
-					/>
 				</header>
 			</div>
 		)
