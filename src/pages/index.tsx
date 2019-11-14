@@ -9,7 +9,7 @@ import Header from '../components/Header'
 import ElectionCard from '../components/ElectionCard'
 
 import './indexPageStyle.scss'
-interface Node {
+interface ElectionTheme {
 	node: {
 		id: string
 		title: string
@@ -32,10 +32,19 @@ interface Node {
 		}
 	}
 }
+interface Banner {
+	node: {
+		headline: string
+		subtext: string
+	}
+}
 interface Data {
 	data: {
 		allContentfulElectionTheme: {
-			edges: Node[]
+			edges: ElectionTheme[]
+		}
+		allContentfulBanner: {
+			edges: Banner[]
 		}
 	}
 }
@@ -43,11 +52,7 @@ const IndexPage: React.FC<Data> = ({ data }) => {
 	return (
 		<Layout>
 			<SEO title="Etusivu" />
-			<Header
-				isAbout={false}
-				Headline="Tulosvastuu takaisin politiikkaan!"
-				Subtext="Poliitikkojen ja virkamiesten tulee kantaa vastuu tuloksistaan. On aika palauttaa tulosvastuu politiikkaan."
-			/>
+			<Header banner={data.allContentfulBanner.edges} />
 
 			<div className="index-page-wrapper">
 				<Section>
@@ -56,7 +61,7 @@ const IndexPage: React.FC<Data> = ({ data }) => {
 				<Section>
 					{data.allContentfulElectionTheme.edges
 						.slice(0, 3)
-						.map(({ node }: Node) => {
+						.map(({ node }: ElectionTheme) => {
 							return (
 								<ElectionCard
 									backGroundImage={node.pictureForArticle.fluid}
@@ -112,6 +117,15 @@ export const query = graphql`
 							sizes
 						}
 					}
+				}
+			}
+		}
+
+		allContentfulBanner {
+			edges {
+				node {
+					subtext
+					headline
 				}
 			}
 		}

@@ -5,8 +5,13 @@ import Header from '..'
 
 storiesOf(`Header`, module).add(`Default`, () => (
 	<Header
-		isAbout={false}
-		Headline="Tulosvastuu takaisin politiikkaan!"
-		Subtext="Poliitikkojen ja virkamiesten tulee kantaa vastuu tuloksistaan. On aika palauttaa tulosvastuu politiikkaan."
+		banner={[
+			{
+				node: {
+					subtext: 'subtext 2',
+					headline: 'Headline 2bbbbbbbbbbbbbb',
+				},
+			},
+		]}
 	/>
 ))
