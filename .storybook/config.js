@@ -1,13 +1,10 @@
 import { configure, addDecorator, addParameters } from '@storybook/react'
-import { action } from '@storybook/addon-actions'
+
 import { withInfo } from '@storybook/addon-info'
 import { withA11y } from '@storybook/addon-a11y'
 import { withKnobs } from '@storybook/addon-knobs'
-import { withConsole } from '@storybook/addon-console'
 import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport'
 addDecorator(withInfo)
-
-addDecorator((storyFn, context) => withConsole()(storyFn)(context))
 addDecorator(withA11y)
 addDecorator(withKnobs)
 addParameters({
