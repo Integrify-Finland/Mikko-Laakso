@@ -21,7 +21,7 @@ if [ "$1" = "error" ]; then
   exit 1
 fi
 
-if ! netlify_deployment_url=$(./node_modules/.bin/netlify deploy --json --site $NETLIFY_SITE_ID --auth $NETLIFY_ACCESS_TOKEN --dir=public | jq '.deploy_url'); then
+if ! netlify_deployment_url=$(./node_modules/.bin/netlify deploy --json --site $NETLIFY_SITE_ID_STAGING --auth $NETLIFY_ACCESS_TOKEN --dir=public | jq '.deploy_url'); then
   echo "Netlify preview deployment failed"
   exit 1
 fi
