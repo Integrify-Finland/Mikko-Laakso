@@ -6,24 +6,24 @@ import Footer from '../Footer'
 import Navigation from '../Navigation'
 
 const Layout: React.FC = ({ children }) => {
-	// const data = useStaticQuery(graphql`
-	//   query SiteTitleQuery {
-	//     site {
-	//       siteMetadata {
-	//         title
-	//       }
-	//     }
-	//   }
-	// `)
+  // const data = useStaticQuery(graphql`
+  //   query SiteTitleQuery {
+  //     site {
+  //       siteMetadata {
+  //         title
+  //       }
+  //     }
+  //   }
+  // `)
 
-	return (
-		<>
-			<Navigation />
-			<main>{children}</main>
+  return (
+    <>
+      <Navigation />
+      <main>{children}</main>
 
-			<Footer />
-		</>
-	)
+      <Footer />
+    </>
+  )
 }
 
 export default Layout

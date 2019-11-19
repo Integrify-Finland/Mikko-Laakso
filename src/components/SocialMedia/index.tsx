@@ -13,13 +13,13 @@ const facebookPage = 'mikkolaaksokok'
 // 	twitterURL: string
 // }
 const SocialMedia: React.FC = () => (
-	<div className="social-media">
-		<ColumnsGrid columns={3}>
-			<Facebook facebookPage={facebookPage} />
-			<Twitter twitterURL={twitterURL} />
-			<Instagram />
-		</ColumnsGrid>
-	</div>
+  <div className="social-media">
+    <ColumnsGrid columns={3}>
+      <Facebook facebookPage={facebookPage} />
+      <Twitter twitterURL={twitterURL} />
+      <Instagram />
+    </ColumnsGrid>
+  </div>
 )
 
 export default SocialMedia
