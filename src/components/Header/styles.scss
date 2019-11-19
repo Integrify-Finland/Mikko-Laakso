@@ -1,517 +1,517 @@
 .header__box {
-	position: absolute;
-	right: 5%;
-	left: 49%;
-	top: 20%;
+  position: absolute;
+  right: 5%;
+  left: 49%;
+  top: 20%;
 
-	@include for-ipad-pro-big-portrait {
-		right: 10%;
-		left: 10%;
-		top: 45%;
-	}
+  @include for-ipad-pro-big-portrait {
+    right: 10%;
+    left: 10%;
+    top: 45%;
+  }
 
-	@include for-tablet-portrait-down {
-		right: 0;
-		left: 0;
-		top: 45%;
-	}
+  @include for-tablet-portrait-down {
+    right: 0;
+    left: 0;
+    top: 45%;
+  }
 
-	@include for-phone-big-landscape {
-		right: 5%;
-		left: 35%;
-		top: 15%;
-	}
+  @include for-phone-big-landscape {
+    right: 5%;
+    left: 35%;
+    top: 15%;
+  }
 
-	@include for-phone-only {
-		position: unset;
-		display: flex;
-	}
+  @include for-phone-only {
+    position: unset;
+    display: flex;
+  }
 }
 
 .header {
-	background-image: url('../Header/assets/mikko.png');
-	background-size: cover;
-	position: relative;
-	height: 700px;
-	background-position: center;
-	-ms-overflow-style: none; // IE 10+
-	scrollbar-width: none; // Firefox
-	/* Fading animation */
-	.fade {
-		-webkit-animation-name: fade;
-		-webkit-animation-duration: 1.5s;
-		animation-name: fade;
-		animation-duration: 1.5s;
-	}
+  background-image: url('../Header/assets/mikko.png');
+  background-size: cover;
+  position: relative;
+  height: 700px;
+  background-position: center;
+  -ms-overflow-style: none; // IE 10+
+  scrollbar-width: none; // Firefox
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
 
-	@-webkit-keyframes fade {
-		from {
-			opacity: 0.4;
-		}
-		to {
-			opacity: 1;
-		}
-	}
+  @-webkit-keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-	@keyframes fade {
-		from {
-			opacity: 0.4;
-		}
-		to {
-			opacity: 1;
-		}
-	}
+  @keyframes fade {
+    from {
+      opacity: 0.4;
+    }
+    to {
+      opacity: 1;
+    }
+  }
 
-	&::-webkit-scrollbar {
-		display: none; // Safari and Chrome
-	}
+  &::-webkit-scrollbar {
+    display: none; // Safari and Chrome
+  }
 
-	@include for-phone-giant-landscape {
-		height: 630px;
-		background-attachment: scroll;
-		overflow: hidden;
-	}
+  @include for-phone-giant-landscape {
+    height: 630px;
+    background-attachment: scroll;
+    overflow: hidden;
+  }
 
-	@include for-phone-big-landscape {
-		height: 457px;
-		background-attachment: scroll;
-		overflow: hidden;
-	}
+  @include for-phone-big-landscape {
+    height: 457px;
+    background-attachment: scroll;
+    overflow: hidden;
+  }
 
-	@include for-phone-only {
-		display: flex;
-		height: 100vh;
-		background-position: -270px 0px;
-		overflow: hidden;
-	}
+  @include for-phone-only {
+    display: flex;
+    height: 100vh;
+    background-position: -270px 0px;
+    overflow: hidden;
+  }
 
-	@include for-phone-landscape {
-		height: 431px;
-		max-height: 510px;
-		background-attachment: scroll;
-		overflow: hidden;
-	}
+  @include for-phone-landscape {
+    height: 431px;
+    max-height: 510px;
+    background-attachment: scroll;
+    overflow: hidden;
+  }
 
-	&__textbox {
-		background-color: rgba(234, 231, 220, 0.9);
-		box-shadow: 0px 95px 0px #023b561a inset;
-		border-radius: 0px 0px 0px 50px;
-		color: $primary;
-		position: relative;
-		margin-bottom: $spacing-02;
-		padding: $spacing-01;
-		font-family: $font-family;
-		z-index: 4;
+  &__textbox {
+    background-color: rgba(234, 231, 220, 0.9);
+    box-shadow: 0px 95px 0px #023b561a inset;
+    border-radius: 0px 0px 0px 50px;
+    color: $primary;
+    position: relative;
+    margin-bottom: $spacing-02;
+    padding: $spacing-01;
+    font-family: $font-family;
+    z-index: 4;
 
-		@include for-ipad-portrait-down {
-			box-shadow: 0px 90px 0px #023b561a inset;
-			padding: $spacing-00-50;
-		}
+    @include for-ipad-portrait-down {
+      box-shadow: 0px 90px 0px #023b561a inset;
+      padding: $spacing-00-50;
+    }
 
-		@include for-ipad-landscape-down {
-			box-shadow: 0px 120px 0px #023b561a inset;
-			padding: $spacing-01;
-		}
+    @include for-ipad-landscape-down {
+      box-shadow: 0px 120px 0px #023b561a inset;
+      padding: $spacing-01;
+    }
 
-		@include for-phone-only {
-			box-shadow: 0px 60px 0px #023b561a inset;
-			border-radius: 0;
-			padding: $spacing-00-50 $spacing-01;
-			z-index: 2;
-			animation-delay: 3000ms;
-			margin-bottom: 0;
-			align-self: flex-end;
-		}
-	}
+    @include for-phone-only {
+      box-shadow: 0px 60px 0px #023b561a inset;
+      border-radius: 0;
+      padding: $spacing-00-50 $spacing-01;
+      z-index: 2;
+      animation-delay: 3000ms;
+      margin-bottom: 0;
+      align-self: flex-end;
+    }
+  }
 
-	.first-stage {
-		animation: textbox-animation-2 700ms
-			cubic-bezier(0.585, -0.275, 0.415, 1.29) 100ms both;
-	}
+  .first-stage {
+    animation: textbox-animation-2 700ms
+      cubic-bezier(0.585, -0.275, 0.415, 1.29) 100ms both;
+  }
 
-	.second-stage {
-		animation: textbox-animation 700ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
-			100ms both;
+  .second-stage {
+    animation: textbox-animation 700ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
+      100ms both;
 
-		@include for-phone-small-landscape {
-			padding: $spacing-00-50 $spacing-01;
-		}
+    @include for-phone-small-landscape {
+      padding: $spacing-00-50 $spacing-01;
+    }
 
-		@include for-phone-landscape {
-			padding: $spacing-00-50 $spacing-01;
-		}
-	}
+    @include for-phone-landscape {
+      padding: $spacing-00-50 $spacing-01;
+    }
+  }
 
-	&__headline {
-		text-transform: uppercase;
-		@include font-size-l-x;
-		font-style: italic;
-		position: relative;
-		// white-space: nowrap;
+  &__headline {
+    text-transform: uppercase;
+    @include font-size-l-x;
+    font-style: italic;
+    position: relative;
+    // white-space: nowrap;
 
-		@include for-ipad-pro {
-			text-align: left;
-		}
+    @include for-ipad-pro {
+      text-align: left;
+    }
 
-		@include for-tablet-portrait-down {
-			font-size: 4rem;
-			text-align: center;
-		}
+    @include for-tablet-portrait-down {
+      font-size: 4rem;
+      text-align: center;
+    }
 
-		@include for-phone-big-landscape {
-			@include font-size-l-xxx;
-		}
+    @include for-phone-big-landscape {
+      @include font-size-l-xxx;
+    }
 
-		@include for-phone-only {
-			text-align: center;
-			@include font-size-l;
-			animation-delay: 3500ms;
-		}
+    @include for-phone-only {
+      text-align: center;
+      @include font-size-l;
+      animation-delay: 3500ms;
+    }
 
-		@include for-phone-small-landscape {
-			padding: 0;
-			animation-delay: 3500ms;
-		}
+    @include for-phone-small-landscape {
+      padding: 0;
+      animation-delay: 3500ms;
+    }
 
-		@include for-phone-landscape {
-			@include font-size-l-xxx;
-			animation-delay: 3500ms;
-		}
-	}
+    @include for-phone-landscape {
+      @include font-size-l-xxx;
+      animation-delay: 3500ms;
+    }
+  }
 
-	&__subtext {
-		@include font-size-l-x;
-		line-height: $spacing-03;
-		// animation: subtext-animation 600ms cubic-bezier(0, 0.015, 0.005, 1.1) 3500ms
-		//   both;
-		position: relative;
-		padding: $spacing-01;
-		padding-bottom: $spacing-02;
+  &__subtext {
+    @include font-size-l-x;
+    line-height: $spacing-03;
+    // animation: subtext-animation 600ms cubic-bezier(0, 0.015, 0.005, 1.1) 3500ms
+    //   both;
+    position: relative;
+    padding: $spacing-01;
+    padding-bottom: $spacing-02;
 
-		@include for-tablet-portrait-down {
-			line-height: $spacing-04;
-			@include font-size-l-xxxx;
-			text-align: center;
-		}
+    @include for-tablet-portrait-down {
+      line-height: $spacing-04;
+      @include font-size-l-xxxx;
+      text-align: center;
+    }
 
-		@include for-phone-big-landscape {
-			@include font-size-l-xx;
-			line-height: 1.3;
-			animation-delay: 4500ms;
-		}
+    @include for-phone-big-landscape {
+      @include font-size-l-xx;
+      line-height: 1.3;
+      animation-delay: 4500ms;
+    }
 
-		@include for-phone-only {
-			line-height: $spacing-02;
-			@include font-size-l;
-			text-align: center;
-			padding: $spacing-00-50;
-			animation-delay: 4500ms;
-		}
+    @include for-phone-only {
+      line-height: $spacing-02;
+      @include font-size-l;
+      text-align: center;
+      padding: $spacing-00-50;
+      animation-delay: 4500ms;
+    }
 
-		@include for-phone-small {
-			line-height: $spacing-02;
-			@include font-size-l;
-			text-align: center;
-			animation-delay: 4500ms;
-		}
+    @include for-phone-small {
+      line-height: $spacing-02;
+      @include font-size-l;
+      text-align: center;
+      animation-delay: 4500ms;
+    }
 
-		@include for-phone-landscape {
-			@include font-size-l-xx;
-			line-height: $spacing-02;
-			padding: $spacing-00-50 $spacing-01;
-			animation-delay: 4500ms;
-		}
-	}
+    @include for-phone-landscape {
+      @include font-size-l-xx;
+      line-height: $spacing-02;
+      padding: $spacing-00-50 $spacing-01;
+      animation-delay: 4500ms;
+    }
+  }
 
-	&__newsletter-wrapper {
-		position: absolute;
-		margin: auto;
-		right: 0;
-		left: 0;
-		bottom: -15%;
-		z-index: 10;
-		// animation: textbox-animation 1000ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
-		// 4000ms both;
-		text-align: center;
-		text-align: -webkit-center;
+  &__newsletter-wrapper {
+    position: absolute;
+    margin: auto;
+    right: 0;
+    left: 0;
+    bottom: -15%;
+    z-index: 10;
+    // animation: textbox-animation 1000ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
+    // 4000ms both;
+    text-align: center;
+    text-align: -webkit-center;
 
-		@include for-ipad-pro-big-portrait {
-			bottom: -30%;
-		}
+    @include for-ipad-pro-big-portrait {
+      bottom: -30%;
+    }
 
-		@include for-ipad-portrait-down {
-			bottom: -15%;
-		}
+    @include for-ipad-portrait-down {
+      bottom: -15%;
+    }
 
-		@include for-ipad-landscape-down {
-			bottom: -12%;
-		}
+    @include for-ipad-landscape-down {
+      bottom: -12%;
+    }
 
-		@include for-phone-big-landscape {
-			bottom: -16%;
-			animation-delay: 5000ms;
-		}
+    @include for-phone-big-landscape {
+      bottom: -16%;
+      animation-delay: 5000ms;
+    }
 
-		@include for-phone-only {
-			bottom: -19%;
-			padding: 0;
-			animation-delay: 5000ms;
-		}
+    @include for-phone-only {
+      bottom: -19%;
+      padding: 0;
+      animation-delay: 5000ms;
+    }
 
-		@include for-phone-landscape {
-			bottom: -25%;
-			animation-delay: 5000ms;
-		}
-	}
+    @include for-phone-landscape {
+      bottom: -25%;
+      animation-delay: 5000ms;
+    }
+  }
 
-	&__image {
-		// animation: image-animation 1400ms cubic-bezier(0.68, -0.15, 0.465, 1.35)
-		//   600ms both;
-		max-height: 105%;
-		max-width: 120%;
-		left: 8%;
-		top: -5%;
-		position: absolute;
-		z-index: 2;
-		transform-origin: bottom;
+  &__image {
+    // animation: image-animation 1400ms cubic-bezier(0.68, -0.15, 0.465, 1.35)
+    //   600ms both;
+    max-height: 105%;
+    max-width: 120%;
+    left: 8%;
+    top: -5%;
+    position: absolute;
+    z-index: 2;
+    transform-origin: bottom;
 
-		@include for-ipad-pro-big-landscape {
-			left: 1%;
-		}
+    @include for-ipad-pro-big-landscape {
+      left: 1%;
+    }
 
-		@include for-ipad-pro {
-			top: 1%;
-		}
+    @include for-ipad-pro {
+      top: 1%;
+    }
 
-		@include for-ipad-pro-landscape {
-			left: 1%;
-			height: 115%;
-		}
+    @include for-ipad-pro-landscape {
+      left: 1%;
+      height: 115%;
+    }
 
-		@include for-ipad-pro-big-portrait {
-			left: 1%;
-			height: 99%;
-		}
+    @include for-ipad-pro-big-portrait {
+      left: 1%;
+      height: 99%;
+    }
 
-		@include for-ipad-landscape-down {
-			left: 1%;
-			height: 99%;
-		}
+    @include for-ipad-landscape-down {
+      left: 1%;
+      height: 99%;
+    }
 
-		@include for-ipad-portrait-down {
-			height: 99%;
-			left: -14%;
-		}
+    @include for-ipad-portrait-down {
+      height: 99%;
+      left: -14%;
+    }
 
-		@include for-phone-big-landscape {
-			height: 452px;
-			animation-delay: 1600ms;
-		}
+    @include for-phone-big-landscape {
+      height: 452px;
+      animation-delay: 1600ms;
+    }
 
-		@include for-phone-only {
-			z-index: 1;
-			left: 0;
-			top: 2%;
-			height: 448px;
-			max-height: 450px;
-			animation-delay: 1600ms;
-		}
+    @include for-phone-only {
+      z-index: 1;
+      left: 0;
+      top: 2%;
+      height: 448px;
+      max-height: 450px;
+      animation-delay: 1600ms;
+    }
 
-		@include for-phone-landscape {
-			z-index: 1;
-			left: 1%;
-			top: -3%;
-			height: 444px;
-			max-height: 450px;
-			animation-delay: 1600ms;
-		}
-	}
+    @include for-phone-landscape {
+      z-index: 1;
+      left: 1%;
+      top: -3%;
+      height: 444px;
+      max-height: 450px;
+      animation-delay: 1600ms;
+    }
+  }
 }
 
 @keyframes image-animation {
-	from {
-		transform: translateX(-500px) scale(0.01);
-	}
+  from {
+    transform: translateX(-500px) scale(0.01);
+  }
 
-	to {
-		transform: translateX(0px) scale(1);
-	}
+  to {
+    transform: translateX(0px) scale(1);
+  }
 }
 
 @keyframes textbox-animation {
-	from {
-		transform: translateX(1400px) skew(55deg);
-	}
+  from {
+    transform: translateX(1400px) skew(55deg);
+  }
 
-	to {
-		transform: translateX(0px) skew(0deg);
-	}
+  to {
+    transform: translateX(0px) skew(0deg);
+  }
 }
 
 @keyframes textbox-animation-2 {
-	from {
-		transform: translateX(0px) skew(0deg);
-	}
+  from {
+    transform: translateX(0px) skew(0deg);
+  }
 
-	to {
-		transform: translateX(1400px) skew(55deg);
-	}
+  to {
+    transform: translateX(1400px) skew(55deg);
+  }
 }
 
 @keyframes headline-animation {
-	from {
-		transform: translateX(-500px) translateY(-800px);
-	}
+  from {
+    transform: translateX(-500px) translateY(-800px);
+  }
 
-	to {
-		transform: translateX(0px) translateY(0px);
-	}
+  to {
+    transform: translateX(0px) translateY(0px);
+  }
 }
 
 @keyframes subtext-animation {
-	from {
-		transform: translateX(2500px) translateY(0px);
-	}
+  from {
+    transform: translateX(2500px) translateY(0px);
+  }
 
-	to {
-		transform: translateX(0px) translateY(0px);
-	}
+  to {
+    transform: translateX(0px) translateY(0px);
+  }
 }
 
 /*************************************************************** About Page Header *********************************/
 
 .about-header {
-	background-image: url('./assets/mikkotaustakuva.jpg');
-	background-size: cover;
-	background-position: left top;
-	display: flex;
-	justify-content: flex-end;
-	border-bottom: 10px $secondary solid;
-	height: 500px;
-	@include for-ipad-pro-big-landscape {
-		background-position: 60% 0%;
-	}
+  background-image: url('./assets/mikkotaustakuva.jpg');
+  background-size: cover;
+  background-position: left top;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 10px $secondary solid;
+  height: 500px;
+  @include for-ipad-pro-big-landscape {
+    background-position: 60% 0%;
+  }
 
-	@include for-ipad-pro-big-portrait {
-		background-position: 30% 50%;
-		flex-direction: column;
-	}
+  @include for-ipad-pro-big-portrait {
+    background-position: 30% 50%;
+    flex-direction: column;
+  }
 
-	@include for-ipad-portrait-down {
-		flex-direction: column;
-		background-position: 23% 50%;
-	}
+  @include for-ipad-portrait-down {
+    flex-direction: column;
+    background-position: 23% 50%;
+  }
 
-	@include for-phone-big-landscape {
-		display: block;
-	}
+  @include for-phone-big-landscape {
+    display: block;
+  }
 
-	@include for-phone-landscape {
-		display: block;
-		background-size: 100%;
-	}
+  @include for-phone-landscape {
+    display: block;
+    background-size: 100%;
+  }
 
-	@include for-phone-portrait {
-		flex-direction: column;
-	}
+  @include for-phone-portrait {
+    flex-direction: column;
+  }
 
-	&__textbox {
-		background-color: rgba(234, 231, 220, 0.5);
-		color: #707070;
-		max-width: 37%;
-		height: 420px;
-		padding: $spacing-02-50 $spacing-03;
-		font-family: $font-family;
-		z-index: 4;
-		align-self: center;
+  &__textbox {
+    background-color: rgba(234, 231, 220, 0.5);
+    color: #707070;
+    max-width: 37%;
+    height: 420px;
+    padding: $spacing-02-50 $spacing-03;
+    font-family: $font-family;
+    z-index: 4;
+    align-self: center;
 
-		animation: textbox-animation 1000ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
-			both;
+    animation: textbox-animation 1000ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
+      both;
 
-		@include for-ipad-pro-big-portrait {
-			align-self: stretch;
-			max-width: 100%;
-		}
+    @include for-ipad-pro-big-portrait {
+      align-self: stretch;
+      max-width: 100%;
+    }
 
-		@include for-ipad-landscape-down {
-			justify-self: flex-end;
-			padding-bottom: $spacing-04;
-		}
+    @include for-ipad-landscape-down {
+      justify-self: flex-end;
+      padding-bottom: $spacing-04;
+    }
 
-		@include for-ipad-portrait-down {
-			align-self: stretch;
-			max-width: 100%;
-		}
+    @include for-ipad-portrait-down {
+      align-self: stretch;
+      max-width: 100%;
+    }
 
-		@include for-phone-big-landscape {
-			max-width: 100%;
-			padding: $spacing-01-50;
-			padding-bottom: 0;
-		}
+    @include for-phone-big-landscape {
+      max-width: 100%;
+      padding: $spacing-01-50;
+      padding-bottom: 0;
+    }
 
-		@include for-phone-landscape {
-			max-width: 100%;
-			padding: $spacing-01;
-			max-height: 100%;
-		}
+    @include for-phone-landscape {
+      max-width: 100%;
+      padding: $spacing-01;
+      max-height: 100%;
+    }
 
-		@include for-phone-portrait {
-			padding: $spacing-01;
-			height: 500px;
-		}
+    @include for-phone-portrait {
+      padding: $spacing-01;
+      height: 500px;
+    }
 
-		h3 {
-			text-transform: uppercase;
-			@include font-size-m;
-			margin: 0;
+    h3 {
+      text-transform: uppercase;
+      @include font-size-m;
+      margin: 0;
 
-			@include for-ipad-pro-big-portrait {
-				@include font-size-l;
-			}
+      @include for-ipad-pro-big-portrait {
+        @include font-size-l;
+      }
 
-			@include for-phone-big-landscape {
-				@include font-size-s;
-			}
+      @include for-phone-big-landscape {
+        @include font-size-s;
+      }
 
-			@include for-phone-landscape {
-				@include font-size-s-x;
-			}
-		}
+      @include for-phone-landscape {
+        @include font-size-s-x;
+      }
+    }
 
-		p {
-			font-size: 0.9rem;
-			margin: 0 0 $spacing-01 0;
+    p {
+      font-size: 0.9rem;
+      margin: 0 0 $spacing-01 0;
 
-			@include for-ipad-pro-big-portrait {
-				font-size: 1.1rem;
-			}
+      @include for-ipad-pro-big-portrait {
+        font-size: 1.1rem;
+      }
 
-			@include for-phone-landscape {
-				@include font-size-s-xx;
-			}
-		}
-		ul {
-			margin-top: 0;
-			padding: 0;
-			list-style-type: none;
-			font-size: 0.9rem;
-		}
-		img {
-			width: 25vw;
-			max-width: 220px;
-			margin-bottom: $spacing-01;
+      @include for-phone-landscape {
+        @include font-size-s-xx;
+      }
+    }
+    ul {
+      margin-top: 0;
+      padding: 0;
+      list-style-type: none;
+      font-size: 0.9rem;
+    }
+    img {
+      width: 25vw;
+      max-width: 220px;
+      margin-bottom: $spacing-01;
 
-			@include for-phone-only {
-				display: none;
-			}
+      @include for-phone-only {
+        display: none;
+      }
 
-			@include for-tablet-portrait-down {
-				display: none;
-			}
+      @include for-tablet-portrait-down {
+        display: none;
+      }
 
-			@include for-ipad-pro {
-				display: none;
-			}
-		}
-	}
+      @include for-ipad-pro {
+        display: none;
+      }
+    }
+  }
 }

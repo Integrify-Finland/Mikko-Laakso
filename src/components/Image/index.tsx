@@ -14,22 +14,22 @@ import Img, { FluidObject } from 'gatsby-image'
  */
 
 const Image: React.FC<{ fluid: FluidObject; key: number }> = ({
-	fluid,
-	key,
+  fluid,
+  key,
 }) => {
-	const data = useStaticQuery(graphql`
-		query {
-			placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
-				childImageSharp {
-					fluid(maxWidth: 300) {
-						...GatsbyImageSharpFluid
-					}
-				}
-			}
-		}
-	`)
+  const data = useStaticQuery(graphql`
+    query {
+      placeholderImage: file(relativePath: { eq: "gatsby-astronaut.png" }) {
+        childImageSharp {
+          fluid(maxWidth: 300) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `)
 
-	return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
+  return <Img fluid={data.placeholderImage.childImageSharp.fluid} />
 }
 
 export default Image
