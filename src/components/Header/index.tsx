@@ -4,7 +4,7 @@ import classNames from 'classnames'
 import { navigate } from 'gatsby'
 import Button from '../Button'
 
-import mikkoHeader from './assets/mikkoHeader.png'
+import mikkoHeader from './assets/mikkoHeader-min.png'
 import './styles.scss'
 const Logo = require('./assets/logo.svg')
 
