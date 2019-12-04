@@ -13,17 +13,10 @@ import './styles.scss'
 interface Props {
   image: FluidObject
   title: string
-  date: string
   url: string
   fullContent: string
 }
-const ElectionThemePost: FC<Props> = ({
-  image,
-  title,
-  date,
-  url,
-  fullContent,
-}) => {
+const ElectionThemePost: FC<Props> = ({ image, title, url, fullContent }) => {
   const shareUrl =
     'http://www.mikkolaakso.com/teemat/' +
     url
@@ -36,7 +29,6 @@ const ElectionThemePost: FC<Props> = ({
 
   return (
     <div className="election-theme-post">
-      <div className="election-theme-post__date">{date}</div>
       <h1 className="election-theme-post__title">{title}</h1>
       <Img fluid={image} className="election-theme-post__image" />
       <div className="election-theme-post__content">

@@ -21,7 +21,6 @@ storiesOf(`ElectionCard`, module).add(`Default`, () => (
     description={
       'Espoolaisten kuntapäättäjien tulee antaa voimakas viesti sen puolesta, ettei ole kenenkään edun mukaista rakentaa pääkaupunkiseudulle uutta tehotonta mammuttikuntaa.'
     }
-    date={'5th Nov 2019'}
     author={'Mikko Laakso'}
     url={'/'}
   />
