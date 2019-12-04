@@ -3,6 +3,8 @@ import React, { useState } from 'react'
 import classNames from 'classnames'
 import { navigate } from 'gatsby'
 import Button from '../Button'
+
+import mikkoHeader from './assets/mikkoHeader.png'
 import './styles.scss'
 const Logo = require('./assets/logo.svg')
 
@@ -51,6 +53,7 @@ const Header: React.FC<Props> = ({
     return (
       <div className="header-wrapper">
         <header className="header">
+          <img src={mikkoHeader} alt="Mikko's image" />
           <div className="header__box fade">
             <div className={textboxClassName}>
               <h1 className="header__headline">{bannerData.headline}</h1>
