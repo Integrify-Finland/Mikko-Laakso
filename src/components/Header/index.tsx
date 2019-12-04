@@ -1,13 +1,21 @@
 import React, { useState } from 'react'
 
 import classNames from 'classnames'
+import { navigate } from 'gatsby'
+import Button from '../Button'
 import './styles.scss'
-
 const Logo = require('./assets/logo.svg')
 
+interface Node {
+  node: {
+    headline: string
+    subtext: string
+    navigateTo: string
+    buttonText: string
+  }
+}
 interface Props {
-  Headline?: string
-  Subtext?: string
+  banner: Node[]
   isAbout?: boolean
   kotipaikka?: string
   syntynyt?: string
@@ -15,9 +23,9 @@ interface Props {
   harrastukset?: string
   koulutus?: string[]
 }
+
 const Header: React.FC<Props> = ({
-  Headline,
-  Subtext,
+  banner,
   isAbout,
   kotipaikka,
   syntynyt,
@@ -26,24 +34,53 @@ const Header: React.FC<Props> = ({
   koulutus = [''],
 }) => {
   const [animationStage] = useState('initial')
-
+  const [bannerData, setBannerData] = useState(banner[0].node)
+  const [currentSlide, setCurrentSlide] = useState(0)
   const textboxClassName = classNames({
     header__textbox: true,
     'first-stage': animationStage === 'first stage',
     'second-stage': animationStage === 'second stage',
   })
 
+  const setSlide = (n: number) => {
+    setBannerData(banner[n].node)
+    setCurrentSlide(n)
+  }
+
   if (!isAbout) {
     return (
       <div className="header-wrapper">
         <header className="header">
-          <div className="header__box">
+          <div className="header__box fade">
             <div className={textboxClassName}>
-              <h1 className="header__headline">{Headline}</h1>
-              <p className="header__subtext">{Subtext}</p>
+              <h1 className="header__headline">{bannerData.headline}</h1>
+              {bannerData.subtext && (
+                <p className="header__subtext">{bannerData.subtext}</p>
+              )}
+              <Button
+                variant="primary"
+                label={bannerData.buttonText}
+                size="md"
+                onClick={() => navigate(bannerData.navigateTo)}
+              />
             </div>
           </div>
         </header>
+        <div className="dotContainer">
+          {banner.map((node, i) => {
+            const bannerClassName = classNames({
+              dot: true,
+              active: i === currentSlide,
+            })
+            return (
+              <span
+                key={i}
+                className={bannerClassName}
+                onClick={e => setSlide(i)}
+              />
+            )
+          })}
+        </div>
       </div>
     )
   } else {

@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-const Logo = require('../assets/logo.svg')
+const Logo = require('../assets/mikkologo.png')
 import FacebookIcon from '../../../SocialMediaIcons/Facebook/index'
 import TwitterIcon from '../../../SocialMediaIcons/Twitter/index'
 import InstagramIcon from '../../../SocialMediaIcons/Instagram/index'
