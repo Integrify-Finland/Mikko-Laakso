@@ -33,6 +33,8 @@
 
 Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files the blazing fast app generator for React. Integrating with Typescript for type checking as well as Jest for unit testing. Provide smooth development experience and CI/CD pipeline with CircleCI and Netlify built in.
 
+<!-- sadasd -->
+
 ## 🚀 Quick start
 
 1.  **Clone this Repo**
