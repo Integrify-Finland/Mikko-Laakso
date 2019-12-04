@@ -11,6 +11,9 @@ import './styles.scss'
 interface DataProps {
   data: {
     forMedia: {
+      description: {
+        description: string
+      }
       pictures: []
     }
   }
@@ -25,7 +28,7 @@ const Medialle = ({ data }: DataProps) => {
     <Layout>
       <SEO title="Medialle" />
       <Section>
-        <Media />
+        <Media text={forMedia.description.description} />
         <div className="medialle-images">
           {forMedia.pictures.map((data: Data, i) => (
             <a
@@ -45,9 +48,6 @@ const Medialle = ({ data }: DataProps) => {
             </a>
           ))}
         </div>
-        <p className="medialle-p">
-          Oheisia kuvia saa käyttää vapaasti median julkaisuissa.
-        </p>
       </Section>
     </Layout>
   )
