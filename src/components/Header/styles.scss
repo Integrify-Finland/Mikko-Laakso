@@ -1,5 +1,5 @@
 .dotContainer {
-  padding-top: 3px;
+  padding-top: 10px;
   text-align: center;
 }
 
@@ -20,9 +20,8 @@
 .header__box {
   position: absolute;
   right: 5%;
-  left: 49%;
   top: 20%;
-
+  width: 50%;
   @include for-ipad-pro-big-portrait {
     right: 10%;
     left: 10%;
@@ -30,20 +29,25 @@
   }
 
   @include for-tablet-portrait-down {
-    right: 0;
+    position: absolute;
+    bottom: 0;
     left: 0;
-    top: 45%;
+    display: flex;
+    width: 100%;
   }
 
   @include for-phone-big-landscape {
-    right: 5%;
-    left: 35%;
-    top: 15%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
   }
 
   @include for-phone-only {
     position: unset;
     display: flex;
+    width: 100%;
   }
 }
 
@@ -55,6 +59,9 @@
   background-position: center;
   -ms-overflow-style: none; // IE 10+
   scrollbar-width: none; // Firefox
+  &__headline {
+    background-color: #023b561a;
+  }
   /* Next & previous buttons */
   .prev,
   .next {
@@ -142,7 +149,6 @@
 
   &__textbox {
     background-color: rgba(234, 231, 220, 0.9);
-    box-shadow: 0px 100px 0px #023b561a inset;
     border-radius: 0px 0px 0px 50px;
     color: $primary;
     position: relative;
@@ -150,25 +156,33 @@
     padding: $spacing-01;
     font-family: $font-family;
     z-index: 4;
-
-    @include for-ipad-portrait-down {
-      box-shadow: 0px 90px 0px #023b561a inset;
-      padding: $spacing-00-50;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    button {
+      align-self: end;
+      @include for-tablet-portrait-down {
+        align-self: center !important;
+      }
+      @include for-phone-only {
+        align-self: center !important;
+      }
     }
-
-    @include for-ipad-landscape-down {
-      box-shadow: 0px 120px 0px #023b561a inset;
-      padding: $spacing-01;
-    }
-
-    @include for-phone-only {
-      box-shadow: 0px 60px 0px #023b561a inset;
+    @include for-tablet-portrait-down {
       border-radius: 0;
-      padding: $spacing-00-50 $spacing-01;
       z-index: 2;
       animation-delay: 3000ms;
       margin-bottom: 0;
       align-self: flex-end;
+      width: 100%;
+    }
+    @include for-phone-only {
+      border-radius: 0;
+      z-index: 2;
+      animation-delay: 3000ms;
+      margin-bottom: 0;
+      align-self: flex-end;
+      width: 100%;
     }
   }
 
@@ -196,20 +210,21 @@
     font-style: italic;
     position: relative;
     // white-space: nowrap;
-
+    margin: 0;
+    padding: 1rem;
     @include for-ipad-pro {
       text-align: left;
-    }
-
-    @include for-tablet-portrait-down {
-      font-size: 4rem;
-      text-align: center;
     }
 
     @include for-phone-big-landscape {
       @include font-size-l-xxx;
     }
-
+    @include for-tablet-portrait-down {
+      text-align: center;
+      margin: 0;
+      padding: 1rem;
+      animation-delay: 3500ms;
+    }
     @include for-phone-only {
       text-align: center;
       @include font-size-l;
@@ -235,11 +250,12 @@
     position: relative;
     padding: $spacing-01;
     padding-bottom: $spacing-02;
-
+    padding-top: 0;
     @include for-tablet-portrait-down {
-      line-height: $spacing-04;
-      @include font-size-l-xxxx;
+      line-height: $spacing-02;
+      @include font-size-l;
       text-align: center;
+      padding: $spacing-00-50;
     }
 
     @include for-phone-big-landscape {

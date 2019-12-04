@@ -54,7 +54,9 @@ const Header: React.FC<Props> = ({
           <div className="header__box fade">
             <div className={textboxClassName}>
               <h1 className="header__headline">{bannerData.headline}</h1>
-              <p className="header__subtext">{bannerData.subtext}</p>
+              {bannerData.subtext && (
+                <p className="header__subtext">{bannerData.subtext}</p>
+              )}
               <Button
                 variant="primary"
                 label={bannerData.buttonText}
