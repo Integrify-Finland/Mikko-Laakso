@@ -10,6 +10,8 @@ storiesOf(`Header`, module).add(`Default`, () => (
         node: {
           subtext: 'subtext 2',
           headline: 'Headline 2bbbbbbbbbbbbbb',
+          navigateTo: 'teemat',
+          buttonText: 'text',
         },
       },
     ]}
