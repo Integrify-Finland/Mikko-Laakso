@@ -22,6 +22,15 @@ interface Node {
     }
   }
 }
+interface Banner {
+  node: {
+    headline: string
+    subtext: string
+    navigateTo: string
+    buttonText: string
+  }
+}
+
 interface Data {
   data: {
     resume: {
@@ -32,6 +41,9 @@ interface Data {
     }
     DetailsAboutMe: {
       edges: Node[]
+    }
+    allContentfulBanner: {
+      edges: Banner[]
     }
     aboutMe: {
       kotipaikka: string
@@ -52,6 +64,7 @@ const Mikko: React.FC<Data> = ({ data }) => {
     <Layout>
       <SEO title="Mikko" />
       <Header
+        banner={data.allContentfulBanner.edges}
         isAbout={true}
         kotipaikka={aboutMe.kotipaikka}
         syntynyt={aboutMe.syntynyt}
@@ -104,7 +117,16 @@ export const query = graphql`
       ammatti
       harrastukset
     }
-
+    allContentfulBanner {
+      edges {
+        node {
+          subtext
+          headline
+          navigateTo
+          buttonText
+        }
+      }
+    }
     DetailsAboutMe: allContentfulDetailsAboutMe(
       sort: { fields: [dateForOrder], order: DESC }
     ) {

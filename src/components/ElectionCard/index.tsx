@@ -11,8 +11,6 @@ interface Props {
   emphasisStatement: string
   /** Article content */
   description: string
-  /** Published date */
-  date: string
   /** Name of author */
   author: string
   /** Link to Election theme page to view full content */
@@ -23,7 +21,6 @@ const ElectionCard: FC<Props> = ({
   title,
   emphasisStatement,
   description,
-  date,
   author,
   url,
 }) => {
@@ -33,7 +30,6 @@ const ElectionCard: FC<Props> = ({
         <Img fluid={backGroundImage} className="blog-card__photo" />
         <ul className="blog-card__details">
           <li className="author">{author}</li>
-          <li className="date">{date}</li>
         </ul>
       </div>
       <div className="blog-card__description">
@@ -65,7 +61,6 @@ ElectionCard.defaultProps = {
   emphasisStatement: 'Itsenäinen Espoo on metropolialueen kehityksen etu.',
   description:
     'Espoolaisten kuntapäättäjien tulee antaa voimakas viesti sen puolesta, ettei ole kenenkään edun mukaista rakentaa pääkaupunkiseudulle uutta tehotonta mammuttikuntaa.',
-  date: '5th Nov 2019',
   author: 'Mikko Laakso',
   url: '/',
 }
