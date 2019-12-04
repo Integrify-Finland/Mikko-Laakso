@@ -2,7 +2,7 @@ import React from 'react'
 import Helmet from 'react-helmet'
 import { useStaticQuery, graphql } from 'gatsby'
 
-const thumbnail = require('../../assets/images/thumbnail.jpg')
+const thumbnail = require('../../assets/images/thumbnail.png')
 interface Props {
   description?: string
   lang?: string
@@ -58,11 +58,11 @@ const SEO: React.FC<Props> = ({ description, lang, meta, title }) => {
         },
         {
           property: 'og:image:width',
-          content: '1200',
+          content: '1060',
         },
         {
           property: 'og:image:height',
-          content: '630',
+          content: '500',
         },
         {
           property: `og:type`,
