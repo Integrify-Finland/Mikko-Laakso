@@ -38,8 +38,6 @@ const ElectionThemePostTemplate: FC<Data> = ({ data }) => {
     <Layout>
       <Section isBlog>
         <ElectionThemePost
-          // NEED TO ADD DATE INTO CONTENTFUL MODEL
-          date={'5/11/2019'}
           title={contentfulElectionTheme.title}
           image={contentfulElectionTheme.pictureForArticle.fluid}
           url={contentfulElectionTheme.url}

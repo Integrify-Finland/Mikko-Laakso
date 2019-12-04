@@ -44,11 +44,6 @@ exports[`<ElectionCard /> should render 1`] = `
         >
           Mikko Laakso
         </li>
-        <li
-          class="date"
-        >
-          5th Nov 2019
-        </li>
       </ul>
     </div>
     <div

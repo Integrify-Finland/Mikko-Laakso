@@ -55,7 +55,6 @@ const Teemat: React.FC<Data> = ({ data }) => {
                 title={node.title}
                 emphasisStatement={node.emphasisStatement}
                 description={node.shortenContent}
-                date={'5th Nov 2019'}
                 author={'Mikko Laakso'}
                 url={`teemat/${node.url
                   .toLowerCase()
