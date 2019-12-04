@@ -117,7 +117,6 @@ export const query = graphql`
       ammatti
       harrastukset
     }
-<<<<<<< HEAD
     allContentfulBanner {
       edges {
         node {
@@ -128,9 +127,6 @@ export const query = graphql`
         }
       }
     }
-=======
-
->>>>>>> develop
     DetailsAboutMe: allContentfulDetailsAboutMe(
       sort: { fields: [dateForOrder], order: DESC }
     ) {
