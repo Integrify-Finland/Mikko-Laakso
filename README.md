@@ -7,6 +7,7 @@
 [![CircleCI](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso.svg?style=svg&circle-token=54a6550068621e2f2c518bf06860871d68f8e543)](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso) [Test status](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso)<br/>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3f910453-5c00-48af-9710-01c18d8694a2/deploy-status)](https://app.netlify.com/sites/mikko-laakso-storybook/deploys) [Storybook Documentation](https://mikko-laakso-storybook.netlify.com/)<br/>
 
+<!-- start -->
 <p align="center">
   <a href="https://reactjs.org/">
     <img alt="React" src="https://miro.medium.com/max/500/1*cPh7ujRIfcHAy4kW2ADGOw.png" width="100" />
