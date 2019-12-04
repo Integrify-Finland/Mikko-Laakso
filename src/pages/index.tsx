@@ -36,6 +36,8 @@ interface Banner {
   node: {
     headline: string
     subtext: string
+    navigateTo: string
+    buttonText: string
   }
 }
 interface Data {
@@ -126,6 +128,8 @@ export const query = graphql`
         node {
           subtext
           headline
+          navigateTo
+          buttonText
         }
       }
     }

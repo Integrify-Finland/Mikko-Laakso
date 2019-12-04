@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 import classNames from 'classnames'
-
+import { navigate } from 'gatsby'
+import Button from '../Button'
 import './styles.scss'
 const Logo = require('./assets/logo.svg')
 
@@ -9,10 +10,12 @@ interface Node {
   node: {
     headline: string
     subtext: string
+    navigateTo: string
+    buttonText: string
   }
 }
 interface Props {
-  banner?: Node[]
+  banner: Node[]
   isAbout?: boolean
   kotipaikka?: string
   syntynyt?: string
@@ -31,28 +34,51 @@ const Header: React.FC<Props> = ({
   koulutus = [''],
 }) => {
   const [animationStage] = useState('initial')
-
+  const [bannerData, setBannerData] = useState(banner[0].node)
+  const [currentSlide, setCurrentSlide] = useState(0)
   const textboxClassName = classNames({
     header__textbox: true,
     'first-stage': animationStage === 'first stage',
     'second-stage': animationStage === 'second stage',
   })
 
+  const setSlide = (n: number) => {
+    setBannerData(banner[n].node)
+    setCurrentSlide(n)
+  }
+
   if (!isAbout) {
     return (
       <div className="header-wrapper">
         <header className="header">
-          {banner.map(({ node }, i) => {
+          <div className="header__box fade">
+            <div className={textboxClassName}>
+              <h1 className="header__headline">{bannerData.headline}</h1>
+              <p className="header__subtext">{bannerData.subtext}</p>
+              <Button
+                variant="primary"
+                label={bannerData.buttonText}
+                size="md"
+                onClick={() => navigate(bannerData.navigateTo)}
+              />
+            </div>
+          </div>
+        </header>
+        <div className="dotContainer">
+          {banner.map((node, i) => {
+            const bannerClassName = classNames({
+              dot: true,
+              active: i === currentSlide,
+            })
             return (
-              <div key={i} className="header__box">
-                <div className={textboxClassName}>
-                  <h1 className="header__headline">{node.headline}</h1>
-                  <p className="header__subtext">{node.subtext}</p>
-                </div>
-              </div>
+              <span
+                key={i}
+                className={bannerClassName}
+                onClick={e => setSlide(i)}
+              />
             )
           })}
-        </header>
+        </div>
       </div>
     )
   } else {
