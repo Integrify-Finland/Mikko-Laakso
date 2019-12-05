@@ -45,7 +45,7 @@ const Teemat: React.FC<Data> = ({ data }) => {
 
       <div className="index-page-wrapper">
         <Section>
-          <h1 className="index-page-wrapper__title">Teemat 2017</h1>
+          <h1 className="index-page-wrapper__title">TEEMAT</h1>
         </Section>
         <Section>
           {data.allContentfulElectionTheme.edges.map(({ node }: Node) => {

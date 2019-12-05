@@ -158,6 +158,7 @@
     font-family: $font-family;
     z-index: 4;
     padding: 0;
+
     display: flex;
     flex-direction: column;
     button {
@@ -213,6 +214,8 @@
     // white-space: nowrap;
     margin: 0;
     padding: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     @include for-ipad-pro {
       text-align: left;
     }
@@ -258,6 +261,8 @@
     padding: $spacing-01;
     padding-bottom: $spacing-02;
     padding-top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
     @include for-tablet-portrait-down {
       line-height: $spacing-02;
       @include font-size-l;
