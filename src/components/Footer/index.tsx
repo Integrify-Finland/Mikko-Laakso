@@ -65,7 +65,9 @@ const Footer: React.FC = () => {
 
         <p className="footer__copyright">{copyright}</p>
       </div>
-      <img src={kokoomusLogo} alt="Kokoomus Logo" />
+      <span className="imgContainer">
+        <img src={kokoomusLogo} alt="Kokoomus Logo" />
+      </span>
     </div>
   )
 }

@@ -58,7 +58,7 @@ const IndexPage: React.FC<Data> = ({ data }) => {
 
       <div className="index-page-wrapper">
         <Section>
-          <h1 className="index-page-wrapper__title">VAALITEEMAT</h1>
+          <h1 className="index-page-wrapper__title">TEEMAT</h1>
         </Section>
         <Section>
           {data.allContentfulElectionTheme.edges

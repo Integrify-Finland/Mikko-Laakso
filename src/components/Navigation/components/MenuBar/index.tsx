@@ -39,7 +39,7 @@ const MenuBar: React.FC<Props> = ({ toggleMenu }) => (
             className="navbar__nav-link"
             activeClassName="navbar__nav-link--active"
           >
-            Vaaliteemat
+            Teemat
           </Link>
 
           <a

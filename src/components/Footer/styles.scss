@@ -9,7 +9,6 @@
   img {
     height: 100px;
     align-self: center;
-    margin-right: 5rem;
     @include for-phone {
       margin-right: 0;
       padding: $spacing-01;
@@ -63,4 +62,8 @@
       padding-top: $spacing-01;
     }
   }
+}
+.imgContainer {
+  display: inline-block;
+  margin: auto;
 }

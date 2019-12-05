@@ -56,7 +56,8 @@
     text-transform: uppercase;
     font-weight: 700;
     z-index: 200;
-    @include font-size-s;
+
+    @include font-size-m;
 
     @include underline($font-color: $secondary, $underline-color: $secondary);
 
@@ -67,7 +68,7 @@
 
   &__nav-media-link {
     margin-left: $spacing-01;
-
+    height: 1rem;
     //Hover, active style for mediaIcon
     &:hover,
     &:active {

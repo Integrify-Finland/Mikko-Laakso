@@ -41,11 +41,11 @@ interface Data {
 const Teemat: React.FC<Data> = ({ data }) => {
   return (
     <Layout>
-      <SEO title="Vaaliteemat" />
+      <SEO title="Teemat" />
 
       <div className="index-page-wrapper">
         <Section>
-          <h1 className="index-page-wrapper__title">VAALITEEMAT 2017</h1>
+          <h1 className="index-page-wrapper__title">Teemat 2017</h1>
         </Section>
         <Section>
           {data.allContentfulElectionTheme.edges.map(({ node }: Node) => {
