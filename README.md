@@ -4,8 +4,9 @@
 [![Typescript Version](https://img.shields.io/badge/TypeScript-3.6.3-007ACC.svg?style=flat&logo=TypeScript)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=flat&logo=Read-The-Docs)](https://opensource.org/licenses/MIT)<br/>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/c38b928a-a7bc-498f-af3d-874982a7b975/deploy-status)](https://app.netlify.com/sites/mikkolaakso/deploys) [Develop Branch Live Preview](https://mikkolaakso-develop.netlify.com/)<br/>
-[![CircleCI](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso.svg?style=svg&circle-token=54a6550068621e2f2c518bf06860871d68f8e543)](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso) [Test status](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso)<br/>
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2091f8e5-2c42-4c94-b393-9af0a094afe7/deploy-status)](https://app.netlify.com/sites/mikkolaakso-master/deploys) [Master Branch Live Preview](https://mikkolaakso-master.netlify.com/)<br/>
 [![Netlify Status](https://api.netlify.com/api/v1/badges/3f910453-5c00-48af-9710-01c18d8694a2/deploy-status)](https://app.netlify.com/sites/mikko-laakso-storybook/deploys) [Storybook Documentation](https://mikko-laakso-storybook.netlify.com/)<br/>
+[![CircleCI](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso.svg?style=svg&circle-token=54a6550068621e2f2c518bf06860871d68f8e543)](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso) [Test status](https://circleci.com/gh/Integrify-Finland/Mikko-Laakso)<br/>
 
 <p align="center">
   <a href="https://reactjs.org/">
