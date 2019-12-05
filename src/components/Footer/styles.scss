@@ -10,6 +10,7 @@
     height: 140px;
     align-self: center;
     @include for-phone {
+      height: 100px;
       margin-right: 0;
       padding: $spacing-01;
     }

@@ -40,6 +40,7 @@ const Header: React.FC<Props> = ({
   const [currentSlide, setCurrentSlide] = useState(0)
   const textboxClassName = classNames({
     header__textbox: true,
+    'header__textbox--just-title': bannerData.subtext === null,
     'first-stage': animationStage === 'first stage',
     'second-stage': animationStage === 'second stage',
   })
