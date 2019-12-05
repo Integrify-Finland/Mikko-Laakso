@@ -1,0 +1,42 @@
+.textbox {
+  width: 40vw;
+
+  @include for-tablet-portrait-down {
+    width: 60vw;
+  }
+
+  @include for-phone-only {
+    margin: auto;
+    width: 90%;
+  }
+
+  h1 {
+    @include font-size-l-xx;
+    display: inline-block;
+    color: $primary;
+    margin-right: $spacing-00-25;
+    margin-bottom: $spacing-00-25;
+
+    @include for-tablet-portrait-down {
+      @include font-size-l-xx;
+    }
+
+    @include for-phone-only {
+      @include font-size-l-xxx;
+    }
+  }
+
+  span {
+    color: $primary;
+    @include font-size-m;
+    white-space: nowrap;
+  }
+
+  p {
+    @include font-size-l;
+    line-height: 1.6rem;
+    color: $primary;
+    margin: 0;
+    margin-top: $spacing-00-50;
+  }
+}

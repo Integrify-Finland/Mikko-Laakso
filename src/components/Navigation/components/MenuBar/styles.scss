@@ -1,0 +1,116 @@
+.navbar {
+  &__wrapper {
+    background-color: $primary;
+    border-bottom: 7px $secondary solid;
+    z-index: 1;
+    width: 100%;
+    &__links {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: $font-family;
+  width: 80%;
+  margin: 0 auto;
+
+  @include for-tablet-portrait-down {
+    width: 93%;
+  }
+
+  @include for-phone-only {
+    width: 93%;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo img {
+    height: 3.2rem;
+    margin-top: $spacing-00-50;
+    margin-right: $spacing-00-50;
+    margin-bottom: 0;
+  }
+
+  .position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: transparent;
+    font-size: 0.9rem;
+  }
+
+  &__links {
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-link {
+    margin-left: $spacing-02;
+    transition: all ease-in-out 0.3s;
+    text-transform: uppercase;
+    font-weight: 700;
+    z-index: 200;
+
+    @include font-size-m;
+
+    @include underline($font-color: $secondary, $underline-color: $secondary);
+
+    &--active {
+      color: lighten($secondary, 40%);
+    }
+  }
+
+  &__nav-media-link {
+    margin-left: $spacing-01;
+    height: 1rem;
+    //Hover, active style for mediaIcon
+    &:hover,
+    &:active {
+      svg {
+        path {
+          fill: $orange;
+        }
+      }
+    }
+  }
+
+  &__menu {
+    margin-right: $spacing-00-75;
+    @include font-size-l-xxx;
+    color: $secondary;
+    outline: none;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+      transform: scale(1.1);
+      transition: all ease-in-out 0.3s;
+    }
+  }
+}
+
+.mobile-menu__button {
+  display: none;
+}
+
+@include for-tablet-portrait-down {
+  .mobile-menu__button {
+    display: initial;
+  }
+
+  .navbar__links {
+    display: none;
+  }
+}
+
+.nav-dots {
+  font-weight: bolder;
+  padding-left: $spacing-01;
+  height: 35px;
+}
