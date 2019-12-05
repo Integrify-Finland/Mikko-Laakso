@@ -36,7 +36,7 @@ class Instagram extends Component {
         <div style={{ margin: 'auto', display: 'block', overflow: 'hidden' }}>
           <iframe
             title="Mikko's Instagram feed"
-            src="//lightwidget.com/widgets/52d1008562005062b1a0fe86ea50407b.html"
+            src="https://cdn.lightwidget.com/widgets/52d1008562005062b1a0fe86ea50407b.html"
             scrolling="no"
             allowtransparency="true"
             class="lightwidget-widget"
