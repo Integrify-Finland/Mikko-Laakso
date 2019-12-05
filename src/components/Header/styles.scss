@@ -21,7 +21,7 @@
   position: absolute;
   right: 5%;
   top: 20%;
-  width: 50%;
+  width: 55%;
   @include for-ipad-pro-big-portrait {
     right: 2%;
     top: 25%;
@@ -62,8 +62,11 @@
     position: absolute;
     bottom: 0;
     left: 0;
-
     height: 800px;
+    @include for-tablet-portrait-down {
+      left: unset;
+      right: 0;
+    }
     @include for-phone-only {
       left: -200px;
     }
@@ -215,7 +218,7 @@
 
   &__headline {
     text-transform: uppercase;
-    @include font-size-l-x;
+    @include font-size-l-xxxx;
     font-style: italic;
     position: relative;
     // white-space: nowrap;
@@ -454,13 +457,14 @@
 /*************************************************************** About Page Header *********************************/
 
 .about-header {
-  background-image: url('./assets/mikkotaustakuva.jpg');
+  background-image: url('./assets/subheader.png');
   background-size: cover;
-  background-position: left top;
+  background-position: 0 25%;
+  height: 600px;
   display: flex;
   justify-content: flex-end;
   border-bottom: 10px $secondary solid;
-  height: 500px;
+
   @include for-ipad-pro-big-landscape {
     background-position: 60% 0%;
   }
@@ -468,11 +472,13 @@
   @include for-ipad-pro-big-portrait {
     background-position: 30% 50%;
     flex-direction: column;
+    height: 500px;
   }
 
   @include for-ipad-portrait-down {
     flex-direction: column;
     background-position: 23% 50%;
+    height: 400px;
   }
 
   @include for-phone-big-landscape {
@@ -489,10 +495,10 @@
   }
 
   &__textbox {
-    background-color: rgba(234, 231, 220, 0.5);
+    background-color: rgba(234, 231, 220, 0.7);
     color: #707070;
     max-width: 37%;
-    height: 420px;
+    height: 520px;
     padding: $spacing-02-50 $spacing-03;
     font-family: $font-family;
     z-index: 4;
@@ -530,7 +536,7 @@
 
     @include for-phone-portrait {
       padding: $spacing-01;
-      height: 500px;
+      height: 600px;
     }
 
     h3 {
