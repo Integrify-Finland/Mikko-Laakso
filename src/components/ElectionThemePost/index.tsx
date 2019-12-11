@@ -17,6 +17,9 @@ interface Props {
   fullContent: string
 }
 const ElectionThemePost: FC<Props> = ({ image, title, url, fullContent }) => {
+  const createMarkup = () => ({
+    __html: fullContent,
+  })
   const shareUrl =
     'http://www.mikkolaakso.com/teemat/' +
     url
@@ -33,7 +36,7 @@ const ElectionThemePost: FC<Props> = ({ image, title, url, fullContent }) => {
       <Img fluid={image} className="election-theme-post__image" />
       <div className="election-theme-post__content">
         <div className="election-theme-post__content__children">
-          {fullContent}
+          <article dangerouslySetInnerHTML={createMarkup()} />
         </div>
 
         <div className="election-theme-post__footer">
