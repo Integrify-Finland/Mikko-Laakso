@@ -15,7 +15,9 @@ interface Data {
       title: string
       shortenContent: string
       fullContent: {
-        fullContent: string
+        childMarkdownRemark: {
+          fullContent: string
+        }
       }
       emphasisStatement: string
       pictureForArticle: {
@@ -41,7 +43,9 @@ const ElectionThemePostTemplate: FC<Data> = ({ data }) => {
           title={contentfulElectionTheme.title}
           image={contentfulElectionTheme.pictureForArticle.fluid}
           url={contentfulElectionTheme.url}
-          fullContent={contentfulElectionTheme.fullContent.fullContent}
+          fullContent={
+            contentfulElectionTheme.fullContent.childMarkdownRemark.fullContent
+          }
         />
       </Section>
     </Layout>
@@ -58,7 +62,9 @@ export const query = graphql`
       title
       shortenContent
       fullContent {
-        fullContent
+        childMarkdownRemark {
+          fullContent: html
+        }
       }
       emphasisStatement
       pictureForArticle {

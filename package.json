@@ -20,6 +20,7 @@
     "gatsby-source-contentful": "^2.1.54",
     "gatsby-source-filesystem": "^2.1.35",
     "gatsby-source-youtube-v2": "^1.0.1",
+    "gatsby-transformer-remark": "^2.6.42",
     "gatsby-transformer-sharp": "^2.2.17",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",

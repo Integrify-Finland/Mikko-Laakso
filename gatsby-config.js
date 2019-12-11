@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-transformer-remark`,
+    },
+    {
       resolve: 'gatsby-plugin-tslint',
       options: {
         test: /\.ts$|\.tsx$/,
