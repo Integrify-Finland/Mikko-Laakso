@@ -51,7 +51,7 @@
   img {
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 20px;
     height: 691px;
     @include for-tablet-portrait-down {
       left: unset;
