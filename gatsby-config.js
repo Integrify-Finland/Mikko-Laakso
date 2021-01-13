@@ -1,9 +1,20 @@
 require('dotenv').config()
+const {
+  NODE_ENV,
+  URL: NETLIFY_SITE_URL = 'https://mikkolaakso.com',
+  DEPLOY_PRIME_URL: NETLIFY_DEPLOY_URL = NETLIFY_SITE_URL,
+  CONTEXT: NETLIFY_ENV = NODE_ENV,
+} = process.env
+
+const isNetlifyProduction = NETLIFY_ENV === 'production'
+const siteUrl = isNetlifyProduction ? NETLIFY_SITE_URL : NETLIFY_DEPLOY_URL
+
 module.exports = {
   siteMetadata: {
     title: `Mikko Laakso`,
     description: `Itsenäisen Espoon, tehokkaan kaavoituksen ja politiikan tulosvastuun puolesta! KTM, kaupunginvaltuutettu ja kaupunginhallituksen varajäsen.`,
-    author: `@tripheo0412`,
+    author: `integrify`,
+    siteUrl,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -59,6 +70,12 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         icon: `src/assets/images/icon.png`, // This path is relative to the root of the site.
+      },
+    },
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: 'https://mikkolaakso.com',
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

@@ -47,17 +47,24 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  img {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 800px;
-    @include for-tablet-portrait-down {
-      left: unset;
-      right: 0;
-    }
+  picture {
     @include for-phone-only {
-      left: -200px;
+      height: 95%;
+      max-height: 591px;
+      margin-top: auto;
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      height: 691px;
+      @include for-tablet-portrait-down {
+        left: unset;
+        right: 0;
+      }
+      @include for-phone-only {
+        position: unset;
+      }
     }
   }
   &__headline {
@@ -136,7 +143,8 @@
 
   @include for-phone-only {
     display: flex;
-    height: 100vh;
+    justify-content: center;
+    height: 85vh;
     background-position: -270px 0px;
     overflow: hidden;
   }
