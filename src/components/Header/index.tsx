@@ -5,6 +5,7 @@ import { navigate } from 'gatsby'
 import Button from '../Button'
 
 import mikkoHeader from './assets/Laakso-Mikko-New.png'
+import mikkoHeaderMin from './assets/Laakso-Mikko-New-min.png'
 import './styles.scss'
 const Logo = require('./assets/logo.svg')
 
@@ -54,7 +55,10 @@ const Header: React.FC<Props> = ({
     return (
       <div className="header-wrapper">
         <header className="header">
-          <img src={mikkoHeader} alt="Mikko's image" />
+          <picture>
+            <source srcSet={mikkoHeader} media="(min-width: 1200px)" />
+            <img src={mikkoHeaderMin} alt="Mikko's image" />
+          </picture>
           <div className="header__box fade">
             <div className={textboxClassName}>
               <h1 className="header__headline">{bannerData.headline}</h1>

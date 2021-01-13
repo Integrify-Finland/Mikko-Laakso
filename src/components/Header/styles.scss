@@ -47,21 +47,24 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-
-  img {
-    position: absolute;
-    bottom: 0;
-    left: 20px;
-    height: 691px;
-    @include for-tablet-portrait-down {
-      left: unset;
-      right: 0;
-    }
+  picture {
     @include for-phone-only {
       height: 95%;
       max-height: 591px;
       margin-top: auto;
-      position: unset;
+    }
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 20px;
+      height: 691px;
+      @include for-tablet-portrait-down {
+        left: unset;
+        right: 0;
+      }
+      @include for-phone-only {
+        position: unset;
+      }
     }
   }
   &__headline {
