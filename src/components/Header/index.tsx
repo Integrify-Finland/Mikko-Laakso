@@ -95,6 +95,7 @@ const Header: React.FC<Props> = ({
     return (
       <div className="about-header-wrapper">
         <header className="about-header">
+          <div className="about-header__img"></div>
           <div className="about-header__textbox">
             <img src={Logo} alt="Mikko Laakso logo" />
             <h3>Kotipaikka:</h3>
