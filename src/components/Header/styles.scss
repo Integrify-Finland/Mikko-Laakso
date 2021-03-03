@@ -522,7 +522,7 @@
       height: 600px;
     }
   }
-
+  position: relative;
   &__textbox {
     background-color: transparent;
     color: #707070;
@@ -549,7 +549,11 @@
     }
 
     @include for-phone-portrait {
+      background-color: rgba(234, 231, 220, 0.5);
       width: 90%;
+      position: absolute;
+      top: 0;
+      height: 525px;
     }
 
     h3 {
@@ -596,7 +600,7 @@
       margin-bottom: $spacing-01;
 
       @include for-phone-only {
-        //display: none;
+        display: none;
       }
 
       @include for-tablet-portrait-down {
