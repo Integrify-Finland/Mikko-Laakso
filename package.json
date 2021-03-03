@@ -3,7 +3,10 @@
   "private": true,
   "description": "mikko-laakso",
   "version": "0.1.0",
-  "author": "Tri Hoang <tripheo0412@gmail.com>",
+  "author": "Integrify",
+    "engines": {
+    "node": ">=12.13.0"
+  },
   "dependencies": {
     "axios": "^0.19.0",
     "classnames": "^2.2.6",
