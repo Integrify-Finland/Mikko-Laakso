@@ -490,7 +490,7 @@
   }
 
   @include for-phone-portrait {
-    flex-direction: column;
+    flex-direction: column-reverse;
     height: auto;
   }
 
