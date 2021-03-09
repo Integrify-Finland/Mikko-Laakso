@@ -6,6 +6,9 @@ import Button from '../Button'
 
 import mikkoHeader from './assets/Laakso-Mikko-New.png'
 import mikkoHeaderMin from './assets/Laakso-Mikko-New-min.png'
+import aboutHeader from './assets/aboutHeader.png'
+import aboutHeaderMin from './assets/aboutHeaderMin.png'
+
 import './styles.scss'
 const Logo = require('./assets/logo.svg')
 
@@ -95,7 +98,11 @@ const Header: React.FC<Props> = ({
     return (
       <div className="about-header-wrapper">
         <header className="about-header">
-          <div className="about-header__img"></div>
+          <picture className="about-header__img">
+            <source srcSet={aboutHeader} media="(max-width: 768px)" />
+            <img src={aboutHeaderMin} alt="Mikko's image" />
+          </picture>
+
           <div className="about-header__textbox">
             <img src={Logo} alt="Mikko Laakso logo" />
             <h3>Kotipaikka:</h3>
