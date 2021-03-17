@@ -465,86 +465,66 @@
 /*************************************************************** About Page Header *********************************/
 
 .about-header {
-  background-image: url('./assets/subheader.png');
-  background-size: cover;
-  background-position: 0 25%;
+  background-image: url('./assets/heroBG3.jpg');
+  background-color: $secondary;
   height: 600px;
   display: flex;
-  justify-content: flex-end;
   border-bottom: 10px $secondary solid;
 
-  @include for-ipad-pro-big-landscape {
-    background-position: 60% 0%;
-  }
-
   @include for-ipad-pro-big-portrait {
-    background-position: 30% 50%;
     flex-direction: column;
-    height: 500px;
+    height: auto;
   }
 
   @include for-ipad-portrait-down {
     flex-direction: column;
-    background-position: 23% 50%;
-    height: 400px;
+    height: auto;
   }
 
   @include for-phone-big-landscape {
-    display: block;
+    flex-direction: column;
+    height: auto;
   }
 
   @include for-phone-landscape {
-    display: block;
-    background-size: 100%;
+    height: auto;
   }
 
   @include for-phone-portrait {
-    flex-direction: column;
+    flex-direction: column-reverse;
+    height: auto;
+  }
+
+  .about-header__img {
+    width: 60%;
+    height: 600px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      max-height: 100%;
+      overflow: hidden;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      width: 100%;
+      justify-content: flex-end;
+    }
   }
 
   &__textbox {
-    background-color: rgba(234, 231, 220, 0.7);
     color: #707070;
-    max-width: 37%;
-    height: 520px;
+    width: 40%;
     padding: $spacing-02-50 $spacing-03;
     font-family: $font-family;
-    z-index: 4;
-    align-self: center;
-
     animation: textbox-animation 1000ms cubic-bezier(0.585, -0.275, 0.415, 1.29)
       both;
 
-    @include for-ipad-pro-big-portrait {
-      align-self: stretch;
-      max-width: 100%;
-    }
-
-    @include for-ipad-landscape-down {
-      justify-self: flex-end;
-      padding-bottom: $spacing-04;
-    }
-
-    @include for-ipad-portrait-down {
-      align-self: stretch;
-      max-width: 100%;
-    }
-
-    @include for-phone-big-landscape {
-      max-width: 100%;
-      padding: $spacing-01-50;
-      padding-bottom: 0;
-    }
-
-    @include for-phone-landscape {
-      max-width: 100%;
-      padding: $spacing-01;
-      max-height: 100%;
-    }
-
-    @include for-phone-portrait {
-      padding: $spacing-01;
-      height: 600px;
+    @media only screen and (max-width: 1000px) {
+      background-color: rgba(234, 231, 220, 0.5);
+      position: absolute;
+      width: 100%;
+      height: 525px;
     }
 
     h3 {
@@ -576,13 +556,21 @@
       @include for-phone-landscape {
         @include font-size-s-xx;
       }
+      @media only screen and (max-width: 900px) {
+      }
     }
+
     ul {
       margin-top: 0;
       padding: 0;
       list-style-type: none;
       font-size: 0.9rem;
+
+      @media only screen and (max-width: 900px) {
+        max-width: 30em;
+      }
     }
+
     img {
       width: 25vw;
       max-width: 220px;
@@ -593,11 +581,11 @@
       }
 
       @include for-tablet-portrait-down {
-        display: none;
+        //display: none;
       }
 
       @include for-ipad-pro {
-        display: none;
+        //display: none;
       }
     }
   }
