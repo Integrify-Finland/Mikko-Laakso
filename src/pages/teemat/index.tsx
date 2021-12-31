@@ -56,7 +56,7 @@ const Teemat: React.FC<Data> = ({ data }) => {
                 emphasisStatement={node.emphasisStatement}
                 description={node.shortenContent}
                 author={'Mikko Laakso'}
-                url={`teemat/${node.url
+                url={`/teemat/${node.url
                   .toLowerCase()
                   .replace(/[']/gi, '')
                   .replace(/ /gi, '-')
