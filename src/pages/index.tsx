@@ -3,7 +3,6 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/Layout'
 import SEO from '../components/SEO'
-import SocialMedia from '../components/SocialMedia/index'
 import Section from '../components/Section'
 import Header from '../components/Header'
 import ElectionCard from '../components/ElectionCard'
@@ -82,10 +81,6 @@ const IndexPage: React.FC<Data> = ({ data }) => {
                 />
               )
             })}
-        </Section>
-        <Section>
-          <h1 className="index-page-wrapper__title">MEDIALLE</h1>
-          <SocialMedia />
         </Section>
       </div>
     </Layout>
